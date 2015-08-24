@@ -1,0 +1,54 @@
+/*  INTRO APP
+====================================================
+==================================================== */
+#intro_app_area {
+	overflow: hidden;
+	padding-bottom: 60px;
+	background: $orange;
+
+	h1 { margin: 35px 0; font-size: em(36); color: white; }
+
+	h2 {
+		font-family: LatoBold;
+		font-size: em(36);
+		color: #291200;
+		cursor: pointer;
+		&:hover { color: lighten(#291200, 15%); }
+	}
+
+	h3 {
+		margin-top: 35px;
+		p { float: left; margin: 5px 0 0 15px; width: 100px; color: white; }
+	}
+}
+ 
+.intro_container { margin: 0 auto; padding: 50px 0; width: 60%; height: 100%; }
+
+.iphone,
+.intro_details { float: left; }
+
+.intro_logo { width: 150px; height: 64px; background-position: 0px -47px; }
+
+.get_ios_app { cursor: pointer; }
+
+.intro_details {
+	margin-left: 30px;
+	width: 55%;
+	h3 { cursor: pointer; }
+	ul { margin-top: 30%; vertical-align: middle; }
+}
+
+.app_store { float: left; width: 122px; height: 41px; background-position: 0px -112px; }
+
+// Name Game
+.arrow_to_namegame {
+	position: relative;
+	bottom: -520px;
+	margin: 20px auto 0;
+	width: 37px;
+	height: 24px;
+	vertical-align: bottom;
+	background-position: -222px 0px;
+	cursor: pointer;
+	&:hover { background-position: -259px 0px; }
+}

@@ -1,0 +1,60 @@
+/*=================================================================
+Who@ Website Master Stylesheet ------------------------------------
+===================================================================
+
+stylesheets/
+|
+|-- modules/              # Common modules
+|   |-- _base.sass        # Imports all the modules
+|   |-- _animation.scss   # CSS animations
+|   |-- _colors.scss      # Colors
+|   |-- _fonts.scss       # Fonts
+|   |-- _mixins.scss      # Imports all mixins & global vars
+|   ...
+|
+|-- partials/             # Partials
+|   |-- _normalize.scss   # http://necolas.github.io/normalize.css
+|   |-- _defaults.scss    # Global Defaults
+|   |-- _public.scss      # Imports all public facing SASS
+|	...
+|   |
+|   |-- public/           # Layout Views
+|   	|-- _front.scss
+|   	|-- _navbar.scss
+|   	|-- _about.scss
+|   	|-- _terms.scss
+|   	|-- _register.scss
+|   	...
+|
+|-- vendor/               # CSS or Sass from other projects
+|   |-- _colorpicker.scss
+|   |-- _jquery.ui.core.scss
+|   ...
+|
+`-- website.scss          # Primary Sass file
+`-- reset.scss            # Super reset then adjusted with normalize
+*/
+
+// Third-party vendors:
+// @import "vendor/";
+
+// Modules and Variables
+@import "reset";
+@import "modules/base";
+
+// Partials
+@import "partials/normalize";
+@import "partials/public/defaults";
+@import "partials/public"; /*
+		@import "navbar";
+		@import "hero";
+		@import "intro";
+		@import "namegame";
+		@import "public/about";
+		@import "public/terms";
+		@import "public/register"
+*/
+
+@import "partials/public/svg";
+@import "partials/public/queries";
+// ...

@@ -1,0 +1,165 @@
+/*  NOTIFICATIONS
+====================================================
+==================================================== */
+
+// Not Verified Notification
+.notification_sticker {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 56px;
+	text-align: center;
+	line-height: 56px;
+	color: white;
+	cursor: default;
+	border-style: solid;
+	border-bottom: 1px dotted #7fb1cb;
+	background: $blue;
+	z-index: 20000;
+
+	a { color: $orange; }
+
+	span { font-family: LatoBold; color: $orange; cursor: pointer; }
+	span:hover { text-decoration: underline; }
+	span:active { color:white; text-decoration: none; }
+
+	button {
+		margin-right: 20px;
+		margin-left: 10px;
+		padding: 5px 10px;
+		border: none;
+		background: white;
+		@include rounded(4px);
+		cursor: pointer;
+	}
+}
+
+#verify_container { margin: 0 auto; max-width: 600px; }
+.verify_msg { margin: 0 auto; }
+.verify_button { position: absolute; top: 0; right: 0; font-size: em(14); background: #006497; z-index: 3; }
+
+// Top Notify
+.top_alert {
+	display: none;
+	position: absolute;
+	top: -36px;
+	padding: 10px;
+	width: 100%;
+	color: white;
+	text-align: center;
+	background: $blue;
+	cursor: pointer;
+	z-index: 100;
+	span { font-family: LatoBold; }
+}
+
+// Spinner
+#spinner {
+	display: none;
+	//opacity: 0;
+	position: absolute;
+	margin-left:auto;
+	margin-right:auto;
+	width: 80px;
+	height: 80px;
+	top: 40%;
+	left:0;
+	right:0;
+	-webkit-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+	z-index: 20000; };
+#whoat-spinner-logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80px;	
+	height: 80px;
+	z-index: 10001; };
+#whoat-spinner-logo img {
+	width: 100%;
+	height:100%; };
+#whoat-gear {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: white;
+	background-size: 40px 40px;
+	background-size: cover;
+	background-image: -webkit-radial-gradient(50% 50%, circle farthest-side, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%);
+	border-radius: 50%;
+	-webkit-box-shadow: 0px 0px 80px 0px rgba(255, 255, 255, 1);
+	box-shadow:         0px 0px 80px 0px rgba(255, 255, 255, 1);
+	-webkit-transition: -webkit-transform 0.1s;
+	-webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+	transform: translateX(100%) translateY(-100%) rotate(45deg);
+	pointer-events: none;
+	z-index: 2; }
+#whoat-gear img { display:block; }
+.animateUp {
+	-webkit-animation: animateUp .6s ease-in-out;
+	animation: animateUp .6s ease-in-out; };
+.animateDown {
+	-webkit-animation: animateDown .5s ease-in-out;
+	animation: animateDown .5s ease-in-out; };
+.spin {
+	-webkit-animation: rotation 4.5s linear infinite;
+	animation: rotation 4.5s linear infinite;
+	-webkit-transform: translateX(100%) translateY(-100%) rotate(45deg);
+	transform: translateX(100%) translateY(-100%) rotate(45deg); };
+
+@-webkit-keyframes animateUp { 
+	0%  {
+		display: block;
+		-webkit-transform: scale(.0);
+		transform: scale(.0);
+		opacity: 0;
+	}
+	70% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}}
+@keyframes animateUp { 
+	0%  {
+		-webkit-transform: scale(.0);
+		transform: scale(.0);
+		opacity: 0;
+	}
+  	70% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+		opacity: 1;
+	}
+  	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}}
+@-webkit-keyframes animateDown { 
+	0%  {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% { 
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 0;
+	}}
+@keyframes animateDown { 
+	0%  {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% { 
+		-webkit-transform: scale(0);
+		transform: scale(0);
+		opacity: 0;
+		display: none;
+	}}

@@ -1,0 +1,54 @@
+/*  FIREFOX adjustments
+====================================================
+==================================================== */
+@-moz-document url-prefix("") {
+
+	// Outbox
+	.outbox_details_name_game,
+	.outbox_details_name_game h2 { float: left; }
+
+	// Inbox
+	.center_action_group { width: 62px; }
+	.member_badge { position: relative; top: 99px; left: 72px; }
+	.dropdown_arrow { display: none; }
+	.profile_contact_select {
+		select { top: 0; }
+	}
+
+	// Inbox Friend
+	.friend_avatar, .my_friend_avatar, .friend_id_details, .friend_requestor { margin-left: 20px; }
+	.friend_requestor { margin-top: 25px; }
+
+	// Tour
+	#tour_1 h1    { width: 101%; }
+
+	.heads_intro_arrows   { width: 374px; background-position: -154px -240px; }
+
+	.ftue_2 .heads_intro_arrows { width: 372px; background-position: -468px -240px; }
+
+	// Sync Modal
+	#patience_modal { height: 384px; }
+
+	#sync_modal hr { display: none; }
+	#sync_modal {
+		h1  { float: none; }
+		.hr { display: block; width: 100%; height: 2px; background: #E0E0E0; }
+	}
+
+	.sync_modal_lock { display: none; }
+
+	.blue_arrow { top: -45px; background-position: -502px -8px; }
+
+	.go_back { position: relative; top: -45px; }
+
+	// Intro Modal
+	.hide_unhide button { padding: 8px 13px; font-size: 0.74em; }
+
+	hr { display: none; }
+
+	// Contacts
+	.unfriend { color: $gray; }
+
+	// Profile
+	.firefox_hr { display:block; }
+}

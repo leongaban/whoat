@@ -1,0 +1,122 @@
+/*  NAVBAR
+====================================================
+==================================================== */
+.whoat_logo {
+	float: left;
+	margin-left: 20px;
+	width: 150px;
+	height: 47px;
+	background-position: 0px 0px;
+	cursor: pointer;
+}
+
+.beta {
+	position: absolute;
+	top: 40px;
+	left: 180px;
+	width: 45px;
+	height: 23px;
+	background-position: 0px 0px;
+}
+
+header {
+	position: relative;
+	margin: 0 auto;
+	padding: 25px 0px;
+	max-width: 1600px;
+	z-index: 3;
+
+	nav {
+		float: right;
+		margin-top: 15px;
+
+		a {
+			color: $orange;
+			text-decoration: none;
+			&:hover { color: darken($orange, 10%); }
+		}
+	}
+
+	li { float: left; margin-right: 35px; font-size: em(18); }
+}
+
+.pdf_menu { position: relative; left: 0px; }
+
+#open_login {
+	position: relative;
+	margin-top: -5px;
+	padding: 5px 20px;
+	color: white;
+	background: $orange;
+	cursor: pointer;
+	@include rounded(4px);
+	z-index: 4;
+	&:hover { background: lighten($orange, 10%); }
+}
+
+// Login
+.home_login_box {
+	display: none;
+	position: absolute;
+	top: 75px;
+	right: 34px;
+	padding: 20px;
+	width: 260px;
+	background: $orange;
+	@include rounded(4px);
+
+	input {
+		margin: 10px 0;
+		padding: 0 10px;
+		width: 236px;
+		height: 35px;
+		font-size: 1em;
+		color: #999;
+		border: 1px solid #999;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+	}
+
+	a {
+		float: left;
+		padding-top: 10px;
+		color: white;
+		text-decoration: none;
+		&:hover { text-decoration: underline; }
+	}
+
+	button {
+		float: right;
+		padding: 8px 21px;
+		font-size: 1em;
+		color: #FFF;
+		border: 1px solid $blue;
+		background: $blue;
+		-webkit-border-radius: 4px;
+		border-radius: 4px;
+		cursor: pointer;
+		&:hover { border: 1px solid lighten($orange, 10%); background: lighten($blue, 10%); }
+	}
+}
+
+// Home Login Error Messages
+.error_home_username,
+.error_home_password {
+	display: none;
+	position: absolute;
+    padding: 0;
+    margin: 0;
+	width: auto;
+	height: auto;
+	background: url(/assets/img/public/gray-tip-right.png) no-repeat;
+	
+	span { padding: 8px 10px; color: white; background: $gray; }
+
+	z-index: 2;
+}
+
+// Error Username
+.error_home_username { top:  41px; left: -171px; }
+
+// Error Password
+.error_home_password { top:  98px; left: -117px; }

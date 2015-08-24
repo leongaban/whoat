@@ -1,0 +1,80 @@
+/*  SVG ILLUSTRATIONS
+====================================================
+==================================================== */
+
+.hand_shake_check,
+.heads_intro_arrows,
+.glass_tie,
+.glass_friends,
+.glass_groups,
+.security_lock,
+.mag_glass,
+.nerd {
+	background-size: 1600px 1600px;
+	background-image: url(/static/img/dashboard/illustrations.svg), none;
+}
+
+.hand_shake_check {
+	width: 268px;
+	height: 306px;
+	background-position: 0 0;
+}
+
+.heads_intro_arrows {
+	width: 356px;
+	height: 271px;
+	background-position: -270px 0;
+}
+
+.glass_tie {
+	width: 156px;
+	height: 197px;
+	background-position: -640px 0;
+}
+
+.glass_friends {
+	margin-top: 10px;
+	width: 165px;
+	height: 197px;
+	background-position: -795px 0;
+}
+
+.glass_groups {
+	margin-top: 25px;
+	width: 156px;
+	height: 183px;
+	background-position: -960px 0;
+}
+
+// used in expand widget
+.expand_widget .glass_groups {
+	float: left;
+	margin-right: 20px;
+	width: 113px;
+	height: 114px;
+	background-size: 1200px 1200px;
+	background-position: -722px -0px;
+}
+
+.security_lock {
+	width: 325px;
+	height: 205px;
+	background-position: 0 -310px;
+}
+
+.mag_glass {
+	width: 112px;
+	height: 113px;
+	background-position: -325px -280px;
+}
+
+.nerd {
+	width: 96px;
+	height: 122px;
+	background-position: -440px -280px;
+}
+
+.ftue_9 .nerd {
+	float: left;
+	margin-right: 30px;
+}

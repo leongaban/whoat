@@ -1,0 +1,72 @@
+/*  ERRORS
+====================================================
+==================================================== */
+
+// 404
+.error_page {
+
+	.whoat_logo_svg { float: none; margin: 0 auto; }
+
+	header { margin: 0 auto; height: 80px; }
+
+	h1 {
+		margin: 10px 0 40px;
+		font-size: em(24);
+		text-align: center;
+		color: $gray;
+	}
+
+	.b { margin-top: 5px; }
+}
+
+.error_container { margin: 40px auto; width: 600px; }
+
+.error_bullets {
+	margin: 0 auto;
+	width: 350px;
+
+	ul { float: left; width: 200px; }
+	li { margin: 20px 0; }
+	a {
+		font-family: LatoBold;
+		font-size: em(24);
+		color: $orange;
+		&:hover { color: darken($orange, 10%); text-decoration: none; }
+	}
+}
+
+.general_error {
+
+	ul { margin: 0 auto; width: 400px; text-align: center; }
+	li { margin: 20px 0; }
+	a {
+		font-family: LatoBold;
+		font-size: em(16);
+		color: $orange;
+		&:hover { color: darken($orange, 10%); text-decoration: none; }
+	}
+}
+
+.our_apps {
+	margin: 0 auto;
+	width: 400px;
+
+	h2 {
+		float: left;
+		margin-top: 40px;
+		width: 100%;
+		font-size: em(24);
+		color: $blue;
+	}
+}
+
+.apple_store_logo,
+.app_button { float: left; }
+
+.lost_man {
+	float: left;
+	margin-top: 10px;
+	width: 130px;
+	height: 210px;
+	background-position: -1360px -240px;
+}

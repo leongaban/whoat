@@ -1,0 +1,360 @@
+/* RECRUIT MILITARY LAYOUT
+====================================================
+==================================================== */
+
+
+/*  HEADER
+==================================================== */
+header {
+	// overflow: hidden;
+	position: relative;
+	margin: 0 0 20px 0;
+	padding: 25px 0px;
+	width: 100%;
+	height: 40px;
+	background: white;
+	@include box-shadow(0px 4px 15px rgba(50, 50, 50, 0.15));
+	z-index: 3;
+
+	nav {
+		float: right;
+		margin-top: 15px;
+
+		a {
+			color: $orange;
+			text-decoration: none;
+
+			&:hover {
+				color: darken($orange, 10%);
+			}
+		}
+	}
+
+	li {
+		float: left;
+		margin-right: 35px;
+		font-size: em(18);
+	}
+}
+
+.whoat_logo {
+	float: left;
+	margin-left: 20px;
+	width: 150px;
+	height: 47px;
+	background-position: 0px -80px;
+	cursor: pointer;
+}
+
+.header_contents {
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.login_button {
+	float: right;
+	margin-top: -7px;
+	padding: 8px 21px;
+	font-size: 1em;
+	border: 1px solid $orange;
+	background: $orange;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+
+	a { color: white; }
+
+	&:hover {
+		border: 1px solid lighten($orange, 10%);
+		background: lighten($orange, 10%);
+	}
+}
+
+#pdf_dropdown {
+	display: none;
+	position: absolute;
+	padding: 10px 0px 10px 15px;
+	margin-left: 60px;
+	top: 40px;
+	font-size: 1em;
+	line-height: em(24);
+	background: white;
+	border: 2px solid $orange;
+	z-index: 10000;
+
+	a {
+		text-decoration: none;
+	}
+
+	li {
+		float: none;
+	}
+
+	li:hover {
+		color: $orange;
+	}
+}
+
+#getting_started_guide { cursor: pointer; }
+
+/*  HERO BLOCK
+==================================================== */
+.hero {
+	margin: 50px auto;
+	width: 80%;
+	text-align: center;
+
+	h1 {
+		margin: 40px 0;
+		font-size: em(36);
+		color: $orange;
+	}
+
+	p {
+		font-size: em(24);
+		line-height: em(24);
+	}
+}
+
+.genband_logo {
+	margin: 0 auto;
+	width: 307px;
+	height: 192px;
+	background-position: -290px -405px;
+}
+
+.get_guides {
+	display: block;
+
+	overflow: hidden;
+	width: 100%;
+	background: $blue;
+}
+
+.get_guides_content {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.get_guides_left {
+	float: left;
+	width: 460px;
+	height: 100%;
+}
+
+.get_guides_right {
+	float: left;
+	margin-left: 80px;
+}
+
+.handshake {
+	float: right;
+	margin-top: 50px;
+	width: 292px;
+	height: 238px;
+	background-image: url('/static/3rdparty/imgs/handshake.png');
+	background-position: 0px -130px;
+}
+
+.download_types {
+	margin-left: 20px;
+	color: white;
+
+	h1 {
+		margin: 50px 0;
+		font-size: em(48);
+	}
+}
+
+.iphone_button,
+.browser_button {
+	float: left;
+	padding: 10px 15px;
+	height: 40px;
+	font-size: em(28);
+	border: 2px solid white;
+	cursor: pointer;
+
+	p { float: left; margin-top: 5px; }
+}
+
+.iphone_button {
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-topleft: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+.browser_button {
+	margin-left: -2px;
+	-webkit-border-top-right-radius: 6px;
+	-webkit-border-bottom-right-radius: 6px;
+	-moz-border-radius-topright: 6px;
+	-moz-border-radius-bottomright: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.iphone_white {
+	float: left;
+	margin-right: 10px;
+	width: 19px;
+	height: 37px;
+	background-image: url('/static/3rdparty/imgs/iphone_white.png');
+	background-position: -160px -86px;
+}
+
+.macbook_icon {
+	float: left;
+	margin: 5px 10px 0 0;
+	width: 44px;
+	height: 28px;
+	background-image: url('/static/3rdparty/imgs/macbook.png');
+	background-position: -220px -90px;
+}
+
+.pdf_icon {
+	float: left;
+	margin: 6px 0 0 10px;
+	width: 23px;
+	height: 24px;
+	background-image: url('/static/3rdparty/imgs/pdf.png');
+	background-position: -190px -90px;
+}
+
+// mobile style
+.get_guides_small {
+	display: none;
+
+	overflow: hidden;
+	padding: 30px 0;
+	width: 100%;
+	color: white;
+	background: $blue;
+
+	h1 {
+		margin: 0 auto;
+		margin-bottom: 20px;
+		width: 250px;
+		font-size: em(24);
+	}
+
+	.iphone_button_small,
+	.browser_button_small {
+		float: left;
+		padding: 10px 15px;
+		height: 30px;
+		font-size: em(14);
+		border: 2px solid white;
+		cursor: pointer;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+
+		p { float: left; margin-top: 5px; }
+	}
+
+	.iphone_button_small {
+		margin-right: 10px;
+	}
+
+	.pdf_icon_small {
+		float: left;
+		margin: 6px 0 0 10px;
+		width: 23px;
+		height: 24px;
+		background-image: url('/static/3rdparty/imgs/pdf.png');
+		background-position: -192px -96px;
+	}
+}
+
+/*  CALL TO ACTION BLOCK
+==================================================== */
+.call_to_action {
+	margin: 50px 0 80px 0;
+	width: 100%;
+
+	a {
+		color: $orange;
+		text-decoration: none;
+	}
+}
+
+.call_to_action_content {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.call_to_action_left {
+	float: left;
+	margin: 40px 50px 0 0;
+	width: auto;
+	height: 100px;
+
+	li { float: left; }
+
+	li:nth-child(2) {
+		margin-left: -8px;
+		padding: 10px 20px;
+		font-size: em(24);
+		color: $orange;
+		border: 2px solid $orange;
+		-webkit-border-top-right-radius: 6px;
+		-webkit-border-bottom-right-radius: 6px;
+		-moz-border-radius-topright: 6px;
+		-moz-border-radius-bottomright: 6px;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+}
+
+.download_on_mobile {
+	display: none;
+}
+
+.app_store {
+	width: 148px;
+	height: 48px;
+	background-image: url('/static/3rdparty/imgs/appstore.png');
+	cursor: pointer;
+}
+
+.call_to_action_right {
+
+	p {
+		font-size: em(24);
+		line-height: em(24);
+	}
+}
+
+/*  FOOTER
+==================================================== */
+footer {
+    position: absolute;
+    bottom: 1;
+    margin-top: -30px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 0.625em;
+    text-align: center;
+    color: #747878;
+    border-top: 1px solid #ccc;
+    background: white;
+    clear: both;
+    z-index: 5;
+
+  	a {
+	    color: #747878;
+	  	text-decoration: none;
+	  	&:hover { text-decoration: underline; }
+	}
+}
+
+.footer_mobile {
+	display: none;
+}

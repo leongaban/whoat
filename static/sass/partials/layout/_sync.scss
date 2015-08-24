@@ -1,0 +1,139 @@
+/*  SYNC PAGE
+====================================================
+==================================================== */
+.sync_page {
+	.widget_content {
+		th, td {
+			margin-right: 20px;
+			padding: 0 0 5px 0;
+			text-align: left;
+			border: 0;
+
+			&:first-child { width: 180px; }
+		}
+	}
+}
+
+.stat_box {
+	min-width: 100px;
+	margin-right: 20px;
+}
+
+.sync_streams { margin-top: 40px; }
+
+.stream_row {
+	float: left;
+	margin: 1% 0;
+	padding-bottom: 20px;
+	width: 100%;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.stream_type_device,
+.stream_type { float: left; width: 205px; }
+.stream_type {
+	margin: 20px 40px 0 0;
+	em { float: left; margin: 35px 0 0 20px; font-family: latothin; font-size: em(24); }
+	p  { float: left; margin-left: 20px; }
+}
+
+.stream_type_device {
+	margin-right: 40px;
+	height: 90px;
+	border: 2px solid $lgray; @include rounded(5px);
+	cursor: pointer;
+}
+
+.stream_stats {
+	float: left;
+	margin-top: 30px;
+	table { margin: 1% 0; }
+}
+
+.snarfed_table {
+
+	// Last Sync
+	th:nth-child(2),
+	td:nth-child(2) {
+		width: 50px;
+	}
+
+	// Total Contacts
+	th:nth-child(3),
+	td:nth-child(3) {
+		width: 135px;
+		// width: 100px;
+	}
+
+	// Unique Contacts
+	// th:nth-child(4),
+	// td:nth-child(4) {
+	// 	width: 100px;
+	// }
+
+	.td_help {
+		float: right;
+		position: relative;
+	}
+}
+
+.iphone_stats {
+	margin-top: 40px;
+}
+
+.no_mobile_synced {
+	margin-top: 10px;
+
+	.apple_store_logo,
+	.app_button { float: left; margin-right: 20px; }
+}
+
+.sync_plus {
+	float: right;
+	margin-top: 40px;
+	width: 28px;
+	height: 40px;
+	background-position: -126px -356px;
+	cursor: pointer;
+}
+
+// iPhone
+.iphone_logo {
+	margin: 15px auto;
+	width: 30px;
+	height: 60px;
+	background-position: -45px -328px;
+}
+
+// Android
+.android_logo {
+	margin: 8px auto;
+	width: 65px;
+	height: 75px;
+	background-position: -486px -161px;
+}
+
+// Exchange, Gmail
+.stream_type {
+	.exchange_logo,
+	.gmail_logo,
+	.hotmail_logo,
+	.yahoo_logo { float: left; margin: 20px 0 20px 10px; }
+
+	.exchange_logo,
+	.gmail_logo { cursor: pointer; }
+}
+
+.ajax_exchange_row,
+.ajax_gmail_row {
+	display: none;
+}
+
+.coming_soon { margin-top: 20px; font-size: em(12); color: $lgray; line-height: 64px; }
+
+// Hotmail & Yahoo
+.hotmail_sync_row,
+.yahoo_sync_row {
+	width: 100%;
+}
+

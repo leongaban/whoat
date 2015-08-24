@@ -1,0 +1,520 @@
+/*  TOUR MODAL
+====================================================
+==================================================== */
+#tour_modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 44px auto 0 auto;
+    padding: 0 20px 30px 20px;
+    width: 756px;
+    // height: 479px;
+    height: 434px;
+    background: white;
+    z-index: 10;
+
+    section { position: relative; }
+    header  { text-align: center; height: 40px; font-size: em(42); color: $blue; }
+    h1      { position: relative; font-size: em(24); color: $blue; }
+    span    { font-family: LatoBold; }
+}
+
+.tour_svg { margin: 0px auto; }
+
+// TOUR 1 Couple Checkmark SVG
+// ====================================================
+#tour_1 {
+    display: block;
+    header { margin: 30px auto 0; width: 65%; }
+    h1 { margin-top: 20px; }
+    p, .whoat_logo_svg { float: left; position: relative; }
+    p { top: 8px; left: 10px; }
+    .whoat_logo_svg { top: 8px; margin-right: 14px; }
+}
+
+.tour_1_section { margin: 0 auto; width: 650px; }
+
+.hand_shake_check {
+    float: left;
+    position: relative;
+    width: 268px;
+    height: 306px;
+    background-position: -200px -240px;
+    margin-top: 40px;
+    z-index: 6;
+}
+
+.tour_1_copy {
+    float: left;
+    position: relative;
+    top: 100px;
+    left: 50px;
+    width: 330px;
+    text-align: left;
+    line-height: em(30);
+}
+
+// Common styles for: Tour 2 - Tour 6
+#tour_2,
+#tour_3,
+#tour_4,
+#tour_5,
+#tour_6 {
+    display: none;
+    header { margin: 30px 0 30px; }
+    img { position: relative; left: 180px; border: 1px solid #ddd; }
+    h1 { margin: 15px auto; width: 650px; line-height: 1.25em; text-align: center; }
+}
+
+
+// TOUR 2 Networking SVG
+// ====================================================
+#tour_2 { display: none; }
+#tour_2 h1  { margin: 4px auto 0; line-height: 1.15em; }
+.heads_intro_arrows {
+    width: 356px;
+    height: 272px;
+    background-position: -480px -240px;
+}
+
+
+// TOUR 3 Heatamp
+// ====================================================
+#tour_3 { display: none; }
+
+
+// TOUR 4 Security Lock
+// ====================================================
+#tour_4 { display: none; }
+.security_lock  {
+    float: left;
+    margin: 45px auto 0 25px;
+    width: 325px;
+    height: 205px;
+    background-position: -200px -560px;
+}
+.tour_4_copy {
+
+    float: right;
+    margin-top: 45px;
+    width: 50%;
+
+    p { margin-bottom: 20px; font-size: em(24); color: $blue; }
+
+    ul { margin-bottom: 25px; }
+
+    li { margin-bottom: 10px; }
+
+    em { margin-top: 20px; a { color: $orange; }}
+}
+
+
+// TOUR 5 Video
+// ====================================================
+#tour_5 { display: none; }
+
+.tour_video {
+    margin: 60px auto 0;
+    width: 500px;
+    height: 281px;
+    background: $lgray;
+    border: 1px solid $lgray;
+}
+
+
+// TOUR 6 Sync Email Options
+// ====================================================
+#tour_6 { display: none; }
+
+.tour_6_header  { margin-top: 30px;}
+.tour_6_section { margin: 0 auto; width: 90%; line-height: em(24); }
+
+.tour_6_bullets {
+    td:nth-child(2) { padding-left: 5px; }
+    p { padding-top: 20px; line-height: em(20); }
+    a { color:$blue; &:hover { text-decoration: none; } }
+    ul { margin: -10px auto 0 auto; width: 400px; }
+    ul > li { float: left; }
+    a { color: $blue; }
+}
+
+// tour_6 and tour_7 button styles
+.tour_6_sync_options,
+.tour_7_buttons {
+    margin-top: 30px;
+    ul > li { float: left; margin-right: 10px; line-height: 1em; }
+    
+}
+
+.tour_6_sync_options {
+    p {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.exchange_logo { margin: 20px auto; width: 60px; height: 60px; background-position: -250px -171px; }
+
+.gmail_logo { margin: 25px auto; width: 60px; height: 44px; background-position: -330px -177px; }
+
+.hotmail_logo {
+    margin: 18px 0 0 50px;
+    background-image: url(/static/img/dashboard/ftue/hotmail_icon.png);
+}
+
+.yahoo_logo {
+    margin: 15px 0 0 50px;
+    background-image: url(/static/img/dashboard/ftue/yahoo_logo.png);
+}
+
+.hotmail_logo,
+.yahoo_logo { width: 57px; height: 57px; }
+
+.snarf_btn {
+    float: none;
+    width: 156px;
+    height: 95px;
+    border: 2px solid $green;
+    @include rounded(5px);
+}
+
+.snarf_btn_active {
+    cursor: pointer;
+    p {font-family: LatoRegular; color: $orange; }
+}
+
+.snarf_btn_done { border: 2px solid $orange; }
+
+.snarfed_check {
+    float: left;
+    position: relative;
+    top: 67px;
+    left: 126px;
+    width: 31px;
+    height: 28px;
+    background-position: -120px -400px;
+}
+
+// Exchange Snarf
+// -----------------------------------------------------
+#tour_6_exchange_snarf {
+    display: none;
+    input { margin-bottom: 20px; width: 400px; }
+}
+
+// Simple
+#simple_exchange_form,
+.exchange_help_options  { float: left; margin: 40px 0 0 40px; }
+#simple_exchange_form   { height: 140px; }
+
+#simple_exchange_form,
+#advanced_exchange_form { float: left; width: 444px; }
+
+// Advanced
+#advanced_exchange_form { display: none; margin: 40px 0 0 40px; }
+
+.exchange_help_options  {
+    width: 30%;
+    ul { margin-top: 10px; }
+    li {
+        margin-bottom: 5px;
+        color: $blue;
+        cursor: pointer;
+        &:hover { text-decoration: underline; }
+    }
+}
+
+.snarfed_exchange_info,
+.snarfed_gmail_info,
+.snarf_exchange_info,
+.snarf_gmail_info {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+    color: $gray;
+    em { font-family: LatoBold; }
+}
+
+.snarfed_exchange_info,
+.snarfed_gmail_info { display: block; }
+
+#patience_exchange { display: none; height: 390px; }
+
+.patience_text {
+    position: relative;
+    top: 80px;
+    margin: 0 auto;
+    width: 530px;
+    height: 40px;
+    text-align: center;
+    font-size: 2.625em;
+    color: #006497;
+
+    p:first-child { float: none; font-size: 24px; line-height: em(18); color: $gray; }
+    p:last-child  { float: none; margin: 20px 0 0 0; font-size: 18px; line-height: em(22); color: $orange; }
+}
+
+.gif_spinner { position: relative; top: 222px; margin: 20px auto 0; width: 60px; }
+
+#exchange_simple_btn {
+    float: right;
+    background: $orange;
+    &:hover { background: lighten($orange, 10%); }
+}
+
+// Gmail Snarf
+// -----------------------------------------------------
+#gmail_synced_container { width: 600px; height: 600px; }
+
+.gmail_synced_message {
+    margin: 15% auto;
+    vertical-align: middle;
+    text-align: center;
+    width: 480px;
+    height: 300px;
+
+    h1 { margin-bottom: 20px; font-family: LatoBold; font-size: em(24); line-height: em(24); color: $blue; }
+    h2 { margin-top: 40px; width: 100%; height: 40px; font-family: LatoRegular; font-size: em(18); color: $gray; }
+    .whoat_logo_svg { margin-left: 165px; }
+}
+
+.resolver_comment { margin-bottom: 30px; line-height: 22px; }
+
+.gmail_synced_logo_center { width: 100%; height: 80px; }
+
+// TOUR 7 Mobile App options
+// ====================================================
+#tour_7 { display: none; }
+
+.tour_7_header { margin: 30px auto 0; width: 330px; height: 86px; }
+
+.rock_hand_container {
+    float: left;
+    margin-top: 20px;
+    width: 74px;
+    height: 86px;
+    -webkit-animation-name: rock_the_hand; 
+    -webkit-animation-iteration-count: 3; 
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 1s;
+}
+
+.rock_hand {
+    position: relative;
+    top: -25px;
+    left: -10px;
+    width: 74px;
+    height: 86px;
+    background-image: url(/static/img/dashboard/ftue/rock_hand.svg), none;
+}
+
+@-webkit-keyframes rock_the_hand {  
+    0% { -webkit-transform: rotate(0deg); }
+    50% { -webkit-transform: rotate(-45deg); }
+    100% { -webkit-transform: rotate(0deg); } 
+}
+
+.rock_words { float: left; margin-top: 10px;
+    p:nth-child(2){ font-size:27px; color:$gray; }
+}
+
+.tour_7_section { margin: 80px auto 0; width: 90%; }
+
+.tour_7_bullets {
+    line-height: em(24);
+    p { padding-bottom: 15px; }
+    td:nth-child(2) { padding-left: 5px; }
+}
+
+// Adjusted tour_7 button styles
+.tour_7_buttons {
+    margin-top: 20px;
+
+    p { float: left; margin-top: em(14); margin-left: 50px; text-align: center; color: $lgray; }
+
+    li {
+        margin-right: 30px;
+        width: 197px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+.app_button {
+    text-align: center;
+    a { text-decoration: none; }
+    em { font-family:LatoRegular; font-size: em(24); color: $blue; }
+    section { float: none; width: 192px; height: 64px; background: $dblue; @include rounded(5px); }
+    p { color: $orange; text-decoration: underline; cursor: pointer; &:hover { text-decoration: none; } }
+}
+
+.apple_store_logo,
+.android_store_logo,
+.browser_tool_logo  { margin-top: 15px; width: 197px; height: 64px; cursor: pointer; }
+.browser_tool_logo  { font-size: 1px; color: #00486c; }
+.apple_store_logo   { background-position: -565px -168px; }
+.android_store_logo { background-position: -766px -168px; }
+.browser_tool_logo  { background-position: -966px -168px; }
+.bookmarklet        { display: block; text-decoration: none; }
+
+#get_text_iphone_app {
+    display: none;
+    margin-top: 10px;
+    color: $blue;
+    z-index: 1;
+
+    input {
+        position: relative;
+        top: 9px;
+        padding: 5px 10px;
+        width: 118px;
+        height: 16px;
+        line-height: 14px;
+        border: 1px solid #d2d2d2;
+        @include rounded(4px);
+    }
+
+    button {
+        position: relative;
+        top: 9px;
+        left: -10px;
+        padding: 6px 10px;
+        color: white;
+        cursor: pointer;
+        background: $orange;
+        border: 0;
+        border-radius: 0 4px 4px 0;
+        &:hover { background: lighten($orange, 10%); }
+    }
+}
+
+.ios_app_sent { display: none; margin-top: 10px; color: $orange; font-family: LatoBold; }
+
+.video_bookmarklet {
+    color: $orange;
+    cursor: pointer;
+    &:hover { text-decoration: underline; }
+}
+
+.play_bookmarklet_vid {
+    float: right;
+    position: relative;
+    top: -18px;
+    right: 35px;
+    width: 18px;
+    height: 18px;
+    background-position: -80px -240px;
+}
+
+// TOUR Footer
+// ====================================================
+.tour_footer {
+    position: absolute;
+    // top: 509px;
+    top: 464px;
+    left: 0;
+    width: 100%;
+    height: 51px;
+    font-family: LatoLight;
+    line-height: 50px;
+    background: #a8c6d5;
+    z-index: 11;
+    ul > li { float: left; cursor: pointer; }
+}
+
+.nav_circles {
+    position: relative; top: -51px; left: 200px;
+    li { position: relative; left: 26px; margin: 0 10px; width: 30px; height: 14px; }
+}
+
+.tour_nav_blue,
+.tour_nav_orange,
+.tour_nav_white { margin-top: 17px; width: 16px; height: 16px; }
+.tour_nav_blue  { background-position: -482px -4px; }
+.tour_nav_white { background-position: -482px -21px; }
+
+// Video icon
+#tour_btn_5 {
+    .tour_nav_white,
+    .tour_nav_blue  { margin: 18px 0 0 6px; width: 8px; height: 13px; }
+    .tour_nav_white { background-position: -120px -480px; }
+    .tour_nav_blue  { background-position: -129px -480px; }
+}
+
+// Lock icon
+#tour_btn_6 {
+    .tour_nav_white,
+    .tour_nav_blue  { width: 12px; height: 14px; }
+    .tour_nav_white { background-position: -120px -505px; }
+    .tour_nav_blue  { background-position: -133px -505px; }
+}
+
+// Cloud icon
+#tour_btn_7 {
+    .tour_nav_white,
+    .tour_nav_blue  { margin: 18px 0 0 -4px; width: 18px; height: 13px; }
+    .tour_nav_white { background-position: -120px -520px; }
+    .tour_nav_blue  { background-position: -120px -534px; }
+}
+
+// Lock icon
+.tour_lock_blue,
+.tour_lock_white,
+.tour_lock_orange { width: 12px; height: 14px; }
+.tour_lock_blue   { background-position: -133px -505px; }
+.tour_lock_white  { background-position: -120px -505px; }
+.tour_lock_orange { background-position: -146px -505px; }
+
+// Cloud icon
+.tour_cloud_blue,
+.tour_cloud_orange { width: 18px; height: 13px; }
+.tour_cloud_blue   { background-position: -120px -534px; }
+.tour_cloud_orange { background-position: -120px -547px; }
+
+.tour_direction_btn {
+    width: 128px;
+    height: 51px;
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    background: #006497;
+    cursor: pointer;
+}
+
+.back_to_tour_6 { display: none; }
+
+.tour_prev { opacity: 0.5; line-height: 50px; }
+
+#next_ftue_btn,
+#finish_ftue_btn { display: none; position: relative; line-height: 24px; top: -51px; left: 668px; }
+#next_ftue_btn   { display: block; }
+
+.tour_nav_circle,
+.tour_direction_btn,
+.tour_prev,
+.next_ftue_btn { @include noselect; }
+
+.close_tour_x {
+    display: none;
+    float: left;
+    position: relative;
+    top: -34px;
+    left: 750px;
+    width: 26px;
+    height: 26px;
+    background-position: -398px -39px;
+    cursor: pointer;
+}
+
+.exchange_snyc_row .exchange_snarf_effect {
+    background: #ffffff;
+    -webkit-transition: background 500ms linear !important;
+    -moz-transition: background 500ms linear !important;
+    -o-transition: background 500ms linear !important;
+    -ms-transition: background 500ms linear !important;
+    transition: background 500ms linear !important;
+}

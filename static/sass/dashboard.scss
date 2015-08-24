@@ -1,0 +1,103 @@
+/*=================================================================
+Who@ Dashboard Master Stylesheet ----------------------------------
+===================================================================
+
+stylesheets/
+|
+|-- modules/            # Common modules
+|   |-- _base           # Imports all the modules
+|   |-- _animation      # CSS animations
+|   |-- _colors         # Colors
+|   |-- _fonts          # Fonts
+|   |-- _mixins         # Imports all mixins & global vars
+|   ...
+|
+|-- partials/           # Partials
+|   |-- _normalize      # http://necolas.github.io/normalize.css
+|   |-- _defaults       # Global Defaults
+|   |-- _alerts   
+|   |-- _layout         # Imports all layouts
+|   |-- _widgets        # All the dashboard widgets
+|	...
+|   |
+|   |-- layout/         # Layout Views
+|   	|-- dark
+|   	|-- browse
+|   	|-- contacts
+|   	|-- guide
+|   	|-- main
+|   	|-- invite
+|   	|-- profile
+|   	|-- reports
+|   	|-- search
+|   	|-- sync
+|   	|-- topbar
+|   	|-- heatmap
+|   	...
+|   |
+|   |-- widgets/
+|   	|-- _widget_defaults
+|   	|-- _outbox
+|   	|-- _inbox
+|   	|-- _friend_details
+|       |-- _expand
+|
+|   |-- _illustrations # SVG for all illustrations
+|   |-- _icons         # SVG file for all icons
+|   |-- _png      	   # not built yet, needed for ie8
+|   |-- _firefox
+|   |-- _queries
+|
+|-- vendor/            # CSS or from other projects
+|   ...
+|
+`-- dashboard          # Primary Sass file
+`-- reset              # Super reset then adjusted with normalize
+*/
+
+
+// Modules and Variables
+@import "reset";
+@import "modules/base";
+
+// Partials
+@import "partials/normalize";
+@import "partials/defaults";
+@import "partials/notifications";
+@import "partials/layout"; /*
+		@import "modals/tour";
+		@import "modals/sync";
+		@import "modals/intro";
+		@import "layout/dark";
+		@import "layout/ftue";
+		@import "layout/main";
+		@import "layout/alerts";
+		@import "layout/sync";
+		@import "layout/browse";
+		@import "layout/search";
+		@import "layout/contacts";
+		@import "layout/profile";
+		@import "layout/reports";
+		// @import "layout/invite";
+		// @import "layout/heatmap";
+		// @import "layout/guide";
+*/
+
+@import "partials/widgets"; /*
+		@import "widgets/widget_defaults";
+		@import "widgets/outbox";
+		@import "widgets/inbox";
+		@import "widgets/friend_details";
+		@import "widgets/expand";
+*/
+
+@import "partials/auxiliary";
+
+// Third-party
+@import "vendor/onoff";
+
+@import "partials/illustrations";
+@import "partials/icons";
+@import "partials/firefox";
+@import "partials/queries";
+// ...

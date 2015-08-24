@@ -1,0 +1,243 @@
+/*  REPORTS
+====================================================
+==================================================== */
+
+/*  General Reports
+==================================================== */
+#reports_widget {
+	thead {
+		td { text-align: center; }
+	}
+
+	tbody {
+		tr:nth-child(even) { background: #f8f8f8; }
+	}
+}
+
+.report_h2 {
+	margin: 30px 0 15px 0;
+	font-family: LatoRegular;
+	font-size: em(20);
+}
+
+.no_bottom_border {
+    border-bottom: none !important;
+    border-top: none !important;
+ }
+
+.col_little_title {
+	padding: 10px 0;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.month_date { min-width: 80px; }
+
+#table_reports {
+	margin-top: 20px;
+
+	thead {
+		th {
+			cursor: pointer;
+		}
+		.col_little_title:nth-child(2),
+		.col_little_title:nth-child(3) {
+			padding-left: 10px;
+			text-align: left;
+		}
+	}
+
+	tbody {
+		td:first-child {
+			width: 20px;
+		}
+
+		p, div {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+}
+
+/*  Onboarding Reports
+==================================================== */
+
+.change_reports_bar {
+	height: 50px;
+	line-height: 45px;
+	border: 1px solid #e0e0e0;
+}
+
+#getRoute {
+	float: left;
+	position: relative;
+	top: 16px;
+	padding: 5px;
+	z-index: 3;
+}
+
+#orgDropdown {
+	float: right;
+	position: relative;
+	top: 16px;
+	right: 10px;
+}
+
+.select_view, .select_copy {
+	float: left;
+	position: relative;
+	top: 5px;
+	left: 10px;
+	margin-left: 10px;
+}
+
+.select_view { margin-right: 15px; margin-left: 0; }
+.select_copy { left: 0; }
+
+.hideSorter {
+	opacity: 0;
+	font-size: 1px;
+}
+
+#table_reports_filter {
+	float: right;
+	position: relative;
+	top: -20px;
+
+	label {
+		margin-right: 10px;
+	}
+
+	imput {
+		height: 30px;
+	}
+}
+
+.check_green,
+.check_red { width: 21px; height: 21px; }
+
+.check_green { background-position: -561px -41px; }
+
+.check_red { background-position: -579px -59px; }
+
+/*  Report Table Styles
+==================================================== */
+.dataTables_info {
+	margin: 20px 0;
+}
+
+.paginate_disabled_previous,
+.paginate_disabled_next {
+	display: none;
+}
+
+.paginate_disabled_previous {
+	float: left;
+}
+
+.paginate_disabled_next {
+	float: right;
+}
+
+/*  Engagement Reports
+==================================================== */
+.special_title_styler {
+	padding: 10px 0;
+}
+
+.relative_absolute_position {
+	position: relative;
+}
+
+.date_items {
+	margin-top: 20px;
+	width: 110px;
+	color: white;
+	background: $blue;
+
+	&:hover {
+		background: lighten($blue, 10%);
+	}
+}
+
+#date_picker {
+	display: none;
+	width: 400px;
+	padding: 20px;
+	// background: gray;
+	background: white;
+	border: 1px solid $blue;
+}
+
+.dropdown_dates_settings {
+	display: none;
+
+	p {
+		float: left;
+		margin-right: 10px;
+		width: 190px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+	}
+
+	#startDate {
+		margin-right: 10px;
+	}
+
+	.date_range {
+		float: left;
+		width: 150px;
+	}
+
+	.execute_button {
+		display: block;
+		margin: 20px 0;
+		// margin: 20px auto;
+		width: 163px;
+		color: white;
+		text-align: center;
+		background: $orange;
+
+		&:hover {
+			background: lighten($orange, 10%);
+		}
+	}
+}
+
+.execute_button_div {
+	float: left;
+	width: 400px;
+	// height: 120px;
+}
+
+#date-list .btn {
+	margin-bottom: 10px;
+	width: 131px;
+	background: lighten($orange, 10%);
+
+	&:hover {
+		background: lighten($orange, 20%);
+	}
+}
+
+/* DEFAULTS */
+
+.hide_show_friends, .hide_show_intros{display: none;}
+
+.align_checkbox{
+  display: inline-block;
+  padding: 0 10px;
+}
+.style_checkbox_p {
+  position: relative;
+  top: -7px;
+  width: 80px;
+}
+
+/*  Unregistered Reports
+==================================================== */
+#table_reports_length {
+	margin-top: 20px;
+}

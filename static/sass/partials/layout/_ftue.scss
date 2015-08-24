@@ -1,0 +1,553 @@
+/*  NEW USER FTUE
+====================================================
+==================================================== */
+
+#white_ftue {
+	display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 5;
+}
+
+#ftue_tour_screens { background: white; }
+
+.ftue_block {
+	position: relative;
+	margin: 0 auto;
+	width: 850px;
+	height: 600px;
+	border: 1px solid #fff;
+	background: white;
+
+	h1 { margin-top: 40px; font-size: em(52); text-align: center; color: $blue; }
+	h2 { font-size: em(24); line-height: em(20); color: $blue; }
+	.tour_1_copy { margin-top: 50px; width: 345px; }
+}
+
+.ftue_sections { margin-top: -40px; height: 570px; background: white; }
+
+// Footer Area
+.ftue_footer {
+    position: absolute;
+    bottom: 0;
+    margin-top: -10px;
+    width: 100%;
+    height: 30px;
+    font-family: LatoLight;
+    line-height: 60px;
+    color: $blue;
+    z-index: 11;
+    @include noselect;
+    li { float: left; cursor: pointer; }
+}
+
+// Section Graphics:
+.glass_tie,
+.glass_friends,
+.glass_groups { float: left; margin-right: 40px; }
+.glass_tie { width: 156px; height: 200px; background-position: -840px -233px; }
+.glass_friends {
+	margin: 15px 50px 0 0;
+	width: 160px;
+	height: 199px;
+	background-position: -1000px -233px;
+}
+
+.glass_groups {
+	margin-top: 20px;
+	width: 156px;
+	height: 183px;
+	background-position: -1160px -240px;
+}
+
+// Section 1 Hand Shake:
+.ftue_1,
+.ftue_2,
+.ftue_3,
+.ftue_4,
+.ftue_5 { display: none; position: relative; top: 60px; }
+
+// Section 2 Intro Graphic:
+.ftue_2 {
+	header { margin-bottom: 30px; }
+	.tour_2_section {
+		margin: 0 auto;
+		width: 680px;
+		h2 { margin-top: 20px; text-align: center; }
+	}
+}
+
+.ftue_3,
+.ftue_4,
+// Section 5 Video: What Gets Uploaded?:
+.ftue_5 { header { margin-bottom: 60px; } }
+
+// Section 6 Snarf Exchange
+.ftue_6,
+
+// Section 7 Snarf Gmail
+.ftue_7,
+
+// Section 8 Expand your Network
+.ftue_8,
+
+// Section 9 Custom Alerts
+.ftue_9,
+
+// Section 10 You Rock / Fail
+.ftue_10 { display: none; position: relative; top: 60px;
+	header { margin: 0 auto; width: 470px; }
+}
+
+// First Frame is visible:
+.ftue_1 { display: block; }
+
+// Section 3 Glass Bubbles:
+.ftue_3 {
+	.tour_svg { position: relative; left: 50px; height: 200px; }
+	.tour_3_section {
+		margin: 0 auto;
+		width: 680px;
+		h2 { margin-top: 25px; text-align: center; }
+	}
+	.tour_3_copy { margin-top: 50px; width: 100%; }
+}
+
+// Section 4 Lock:
+.ftue_4 {
+	.security_lock { margin: 20px 0 0 60px; }
+	.tour_4_copy { float: left; margin: 20px 0 0 50px; width: 360px; }
+	td { padding: 8px 0; }
+	em { position: relative; top: 20px; }
+	.outbox_details_accepted_icon { float: left; margin-right: 8px; }
+}
+
+// Section 6 Snarf Exchange
+.ftue_6 {
+	header { width: 400px; }
+	h1 { margin-top: 10px; }
+	.exchange_logo,
+	.patience_text p { position: relative; top: -10px; }
+	#spinner { top: 380px; }
+}
+
+.ftue_8 {
+	header { width: 700px; }
+	h1 { line-height: 50px; }
+	p { margin: 0 auto; width: 456px; text-align: center; line-height: em(22); }
+}
+
+.ftue_9 {
+	header {
+		margin: 0 auto;
+		width: 650px;
+		height: 125px;
+		h1 { float: left; }
+	}
+}
+
+.expand_head_icon {
+	float: left;
+	margin-right: 30px;
+	width: 96px;
+	height: 122px;
+	background-position: 0px -700px;
+}
+
+.ftue_9_content {
+	width: 800px;
+	margin: 40px auto;
+	h2 { margin: -15px 0 10px 0; font-size: em(18); color: $orange; }
+}
+
+.ftue_9_content #spinner { margin-top: 150px; }
+
+.expand_invite,
+.expand_friend { display: none; float: left; width: 380px; }
+.expand_row { height: 50px; line-height: 50px; border-bottom: 1px solid #E0E0E0; }
+.expand_invite { margin-right: 20px; }
+.expand_friend_label { width: 267px; }
+
+.ajax_in_invite,
+.ajax_in_friends {
+	position: relative; width: 380px; height: 330px; overflow: auto; overflow-x: hidden;
+	table { margin-top: -15px; }
+}
+
+.invite_blue,
+.friend_yellow { padding: 7px 10px; color: white; font-size: em(14); text-align: center; line-height: 1em; }
+
+.invite_blue {
+	float: right;
+	position: relative;
+	top: 21px;
+	width: 54px;
+	background: $blue;
+	z-index: 3;
+	&:hover { background: lighten($blue, 10%); }
+}
+
+.friend_yellow {
+	background: $yellow;
+	&:hover { background: lighten($yellow, 10%); }
+}
+
+.expand_invite_row {
+	position: absolute;
+	margin-left: 5px;
+	padding: 5px 0 10px;
+	width: 350px;
+	border-bottom: 1px solid #CCC;
+	span { position: absolute; font-size: em(12); }
+	p { margin: 10px 0 -10px 0; }
+}
+
+.ftue_8 {
+	header { margin: 0 auto; width: 675px; height: 150px; }
+	h1 { float: left; }
+	position: relative;
+	z-index: 4;
+}
+
+.ftue_8_content {
+	width: 800px;
+	margin: 0 auto;
+	// p { margin: -20px auto 20px; width: 480px; text-align: center; line-height: em(20); }
+	input { margin: 0 auto; }
+}
+
+.ftue_custom_input { margin: 20px auto; width: 500px; }
+
+#ftue_alert_input {
+	padding: 0 12px 0 10px;
+	width: 500px;
+	height: 32px;
+	font-family: LatoLight, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 1em;
+	line-height: 20px;
+	color: #000;
+	border: 1px solid $lgray;
+	background: #f2f2f2;
+	&:hover { border: 1px solid #d9d9d9; }
+}
+
+.alerts_head_icon {
+	float: left;
+	margin: 20px 20px 0 0;
+	width: 112px;
+	height: 81px;
+	background-position: -840px -440px;
+}
+
+.ajax_company_results,
+.ajax_added_company {
+	margin-top: -20px;
+	// width: 100%;
+	background: white;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.ftue_company_results,
+.ftue_added_companies {
+	display: none;
+	position: relative;
+	top: -20px;
+	z-index: 5;
+	margin: 0 auto;
+	// width: 500px;
+
+	.company_results_table {
+		// width: 525px;
+		tr { border-bottom: 1px solid #ccc; }
+	}
+
+	.company_results_row {
+		padding: 10px;
+		height: 30px;
+		border-bottom: 1px solid #ccc;
+		background: white;
+	}
+
+	.company_label { padding-left: 10px; line-height: 30px; }
+
+	.add_company_alert {
+		float: right;
+		margin: 10px 20px 0 0;
+		padding: 5px 10px;
+		background: $lgray;
+		@include rounded(6px);
+		&:hover { background: darken($lgray, 10%); }
+	}
+}
+
+// For FTUE specific section:
+.ftue_8_content {
+	.ftue_company_results {
+		top: 0;
+		left: 10px;
+		width: 527px;
+		height: 400px;
+		// overflow-y: hidden;
+		z-index: 12;
+	}
+
+	.ajax_company_results {
+		height: 300px;
+	}
+
+	.ftue_company_results,
+	.ftue_added_companies {
+		top: 10px;
+		left: 10px;
+		width: 527px;
+	}
+
+	.company_results_table {
+		width: 522px;
+	}
+
+}
+
+.company_alert_error {
+	display: none;
+	margin: 0 auto;
+	padding: 5px 0 20px;
+	height: 30px;
+	width: 500px;
+	font-size: em(18);
+	color: $orange;
+	text-align: center;
+	line-height: 10px;
+	background: #FFF;
+	cursor: pointer;
+}
+
+// List of Triggers in FTUE & dashboard widget:
+.ftue_added_companies,
+.company_results_table {
+
+	a { text-decoration: none; }
+
+	td { border-right: 0 !important; }
+
+	.company_label { min-width: 400px; font-family: LatoRegular; color: $blue; }
+
+	.blue_delete {
+		float: right;
+		position: relative;
+		top: 5px;
+		margin-bottom: 5px;
+		width: 27px;
+		height: 27px;
+		background-position: -327px -6px;
+		cursor: pointer;
+	}
+}
+
+.ftue_exchange_error {
+	display: none;
+	position: absolute;
+	top: 135px;
+	padding: 20px 17px;
+	width: 460px;
+	color: #FFF;
+	text-align: center;
+	background: $orange;
+	cursor: pointer;
+	z-index: 4;
+
+	a {
+		color: #FFF;
+		&:hover { text-decoration: none; }
+	}
+}
+
+.ftue_exchange_snarfed,
+.ftue_gmail_snarfed {
+	display: none;
+	margin: 80px auto;
+	text-align: center;
+	span { font-size: em(48); color: $orange; }
+	p { margin-top: 20px; font-size: em(20); color: $gray; }
+}
+
+.ftue_gmail_snarfed { margin: 70px auto; }
+
+.ftue_gmail_snarf { display: none; }
+
+.gmail_snarf_content {
+	margin: 50px auto;
+	width: 600px;
+	text-align: center;
+	p { line-height: 24px; }
+}
+
+// Gmail snarf button
+.gmail_ftue_snarf {
+	margin: 30px auto;
+	padding: 8px 10px;
+	width: 120px;
+	background: $orange;
+	&:hover { background: lighten($orange, 10%); }
+}
+
+.icon_snarf_lock { position: relative; z-index: 2; }
+.snarf_lock_hover {
+	display: none; position: absolute; top: 6px; left: 344px; width: 90px; height: 64px; background-position: -1170px -161px; z-index: 5;
+}
+.small_exchange_icon,
+.small_gmail_icon { float: left; position: relative; cursor: pointer; }
+.small_exchange_icon { top: 36px; left: 11px; width: 19px; height: 19px; background-position: -80px -261px; }
+.small_gmail_icon { opacity: 0.5; top: 38px; left: 40px; width: 19px; height: 14px; background-position: -101px -266px; }
+
+.ftue_exchange_snarf_simple,
+.ftue_exchange_snarf_advanced {
+	margin: 20px auto;
+	width: 500px;
+	background: white;
+	p { margin-bottom: 20px; text-align: center; line-height: em(20); }
+	input { margin-bottom: 20px; width: 450px; }
+}
+
+.ftue_exchange_snarf_advanced { display: none; margin-top: 30px; }
+
+.ftue_10 { display: none; position: relative; top: 60px;
+	
+	header { margin: 40px auto; width: 315px; height: 50px; }
+
+	.rock_words {
+		float: left;
+		p:first-child  { font-size: em(48); color: $blue; }
+		p:nth-child(2) { font-size: em(27); color: $gray; }
+	}
+
+	.android_store_logo { opacity: 0.5; }
+
+	.ftue_10_buttons {
+		margin: 0px auto;
+		width: 390px;
+		em { position: relative; top: 5px; font-size: 1em; color: $gray; }
+	}
+
+	.apple_store_logo { margin-bottom: 10px; }
+
+	h2 { margin: 90px 0 40px; text-align: center; }
+	
+	p { text-align: center; }
+}
+
+.ftue_10_section { margin: 40px auto 0; width: 90%; }
+
+.ftue_10_buttons {
+	margin-top: -10px;
+	width: 390px;
+	height: 60px;
+	margin: 0 auto;
+
+	em { font-size: em(16); }
+
+	.apple_store_logo,
+	.app_button section { margin-bottom: 10px; }
+}
+
+.tour_play_blue,
+.tour_play_orange   { width: 8px; height: 13px; }
+.tour_play_blue     { background-position: -129px -480px; }
+.tour_play_orange   { background-position: -138px -480px; }
+
+.tour_expand_blue,
+.tour_expand_orange { width: 14px; height: 13px; }
+.tour_expand_blue   { background-position: -146px -520px; }
+.tour_expand_orange { background-position: -146px -534px; }
+
+.tour_alerts_blue,
+.tour_alerts_orange { width: 12px; height: 14px; }
+.tour_alerts_blue   { background-position: -160px -520px; }
+.tour_alerts_orange { background-position: -160px -536px; }
+
+.ftue_circles {
+    position: relative;
+    left: 85px;
+
+    li { position: relative; left: 20px; margin: 0 10px; width: 25px; }
+
+    .tour_lock_blue,
+	.tour_lock_white,
+	.tour_lock_orange,
+	.tour_play_blue,
+	.tour_play_orange,
+	.tour_expand_blue,
+	.tour_expand_orange,
+	.tour_alerts_blue,
+	.tour_alerts_orange,
+	.tour_cloud_blue,
+	.tour_cloud_orange { margin-top: 15px; }
+	.tour_play_blue,
+	.tour_play_orange { margin-top: 17px; }
+}
+
+.tour_nav_orange { background-position: -585px -40px; }
+
+.ftue_prev,
+.ftue_next { font-size: em(27); }
+.ftue_prev { float: left; }
+.ftue_next { float: right; }
+.ftue_continue, 
+.ftue_last { display: none; float: right; }
+
+.ftue_direction_btn {
+	margin-top: -6px;
+    width: 128px;
+    height: 51px;
+    font-size: em(26);
+    text-align: center;
+    cursor: pointer;
+}
+
+.ftue_prev { opacity: 0.25; }
+
+#ftue_done_button { display: none; float: right; }
+
+.last_tour_fail { display: block; }
+
+header.last_tour_fail {
+	width: 100%;
+
+	h1, h3 { text-align: center; color: $red; }
+
+	h1 { font-family: LatoBold; }
+
+	h3 { margin-top: 20px; font-size: em(24); }
+}
+
+.last_tour_ok { display: none; }
+
+.in_order_message { margin-bottom: 30px; font-size: em(27); text-align: center; }
+
+.ftue_email_icons {
+	margin: 20px auto 0 auto;
+	width: 112%;
+	height: 80px;
+
+	ul { margin: 0 auto; width: 250px; }
+
+	li { float: left; margin-right: 40px; width: 53px; cursor: pointer; }
+
+	li:last-child { margin-right: 0; }
+}
+
+.hotmail_logo_100 { margin-top: 20px; }
+
+.ftue_last_message {
+	margin: 40px auto;
+	font-size: 1.5em;
+	text-align: center;
+	color: $blue;
+	width: 640px;
+
+	em {
+		color: $orange;
+		font-family: LatoRegular;
+		text-decoration: underline;
+		cursor: pointer;
+		&:hover { text-decoration: none; }
+	}
+}

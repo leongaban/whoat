@@ -1,0 +1,338 @@
+/*  TOP BAR
+====================================================
+==================================================== */
+#top_bar {
+	position: relative;
+	// max-width: 1600px;
+	height: 80px;
+	background: white;
+	border-bottom: 1px solid #eee;
+	z-index: 3;
+}
+
+.whoat_logo_svg {
+	float: left;
+	position: relative;
+	top: 17px;
+	left: 20px;
+	width: 135px;
+	height: 42px;
+	cursor: pointer;
+}
+
+.beta {
+	position: absolute;
+	top: 28px;
+	left: 252px;
+	width: 45px;
+	height: 23px;
+	background-position: 0px 0px;
+}
+
+.intro_app_logo {
+	float: left;
+	position: relative;
+	top: 14px;
+	left: 20px;
+	margin-left: 10px;
+	width: 77px;
+	height: 38px;
+	background-position: -520px 0px;
+	cursor: pointer;
+}
+
+.app_switch {
+	float: left;
+	position: relative;
+	top: 30px;
+	left: 20px;
+	width: 30px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.app_arrow_down {
+	margin: 10px 0 0 10px;
+	width: 9px;
+	height: 6px;
+	background-position: -409px -30px;
+	cursor: pointer;
+}
+
+.app_arrow_up {
+	margin: 10px 0 0 10px;
+	width: 9px;
+	height: 6px;
+	background-position: -418px -30px;
+	cursor: pointer;
+}
+
+// App dropdown
+.app_menu {
+	display: none;
+	position: absolute;
+	top: 80px;
+	left: 165px;
+	z-index: 10001;
+
+	ul > li {
+		padding: 10px 20px;
+		width: 170px;
+		font-size: 1.125em;
+		text-align: left;
+		color: #ffffff;
+		border-top: 1px solid lighten($blue, 15%);;
+		background: $blue;
+		@include transition(background, .2s, ease-in-out);
+		cursor: pointer;
+
+		&:hover { background: lighten($blue, 15%); }
+		&:active { color: #ccc; background: lighten($blue, 30%); }
+	}
+
+	li:last-child {
+		-webkit-border-bottom-right-radius: 12px;
+		-webkit-border-bottom-left-radius: 12px;
+		-moz-border-radius-bottomright: 12px;
+		-moz-border-radius-bottomleft: 12px;
+		border-bottom-right-radius: 12px;
+		border-bottom-left-radius: 12px;
+	}
+
+	span { font-size: em(11); color: #ccc; }
+}
+
+.switch_intro_on {
+	margin-bottom: 10px;
+	width: 71px;
+	height: 26px;
+	background-position: -615px -6px;
+}
+
+.switch_intro_off { margin-left: 18px; }
+
+.switch_namegame_off { margin: 10px 0 0 18px; width: 115px; height: 26px; background-position: -632px -40px; }
+
+.switch_wishlist_on,
+.switch_wishlist_off { margin: 0 0 9px 18px; width: 94px; height: 28px; }
+.switch_wishlist_off { background-position: -632px -70px; }
+
+.switch_admin_off {
+	margin-left: 18px;
+	width: 141px;
+	height: 40px;
+	background-position: -632px -100px;
+}
+
+#search_tooltip {
+	opacity: 0;
+	position: absolute;
+	top: 35px;
+	right: 131px;
+	padding: 10px 25px;
+	text-align: center;
+	background: #d9d9d9;
+}
+
+#settings { position: relative; top: 10px; }
+
+/* browse dropdown
+=============================== */
+#view_all_dropdown {
+	position: relative;
+	top: -10px;
+	float: right;
+	margin: 20px 5px 0 20px;
+	padding: 7px 12px;
+	font-family: LatoRegular;
+	font-size: 1em;
+	color: #515656;
+	border: 1px solid $lgray;
+	// cursor: pointer;
+	@include rounded(4px);
+}
+
+#browse_titles,
+#browse_regions { display: none; }
+
+#browse_titles,
+#browse_regions,
+#browse_companies {
+	cursor: pointer;
+}
+
+.show_browse_choices {
+	float: right;
+	margin: 10px 10px 0 0;
+	width: 30px;
+	height: 35px;
+	cursor: pointer;
+}
+
+.browse_dropdown_arrow {
+	position: relative;
+	top: 15px;
+	margin: 0 auto;
+	width: 9px;
+	height: 6px;
+	background-position: -409px -30px;
+}
+
+.divider { float: right; margin: 10px 30px 0 0; width: 1px; height: 34px; background: $lgray; }
+
+#browse_options {
+	display: none;
+	position: absolute;
+	top: 29px;
+	left: -1px;
+	padding: 10px;
+	width: 142px;
+	border: 1px solid $lgray;
+	background: #FFF;
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+
+	li {
+		margin-bottom: 15px;
+		cursor: pointer;
+		&:last-child { margin-bottom: 0; }
+		&:hover { color: $orange; text-decoration: underline; }
+	}
+}
+
+/* search field
+=============================== */
+.search_field {
+	position: relative;
+	top: -10px;
+	float: right;
+	margin: 20px 0 0 0;
+	width: 445px;
+}
+
+#dash_search_input {
+	float: left;
+	padding: 0 12px 0 10px;
+	width: 320px;
+	height: 32px;
+	font-family: LatoLight, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 1em;
+	line-height: 20px;
+	color: #000;
+	border: 1px solid white;
+	background: #f2f2f2;
+
+	&:hover { margin-top: 1px; height: 30px; line-height: 18px; border: 1px solid #d9d9d9; }
+}
+
+.search_button {
+	float: left;
+	margin-top: 1px;
+	width: 35px;
+	height: 32px;
+	background: #d9d9d9;
+	background-position: -203px -3px;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		background: darken(#d9d9d9, 15%);
+		background-position: -203px -3px;
+	}
+
+	&:active {
+		background: darken(#d9d9d9, 25%);
+		background-position: -203px -3px;
+	}
+}
+
+/* settings drop down
+=============================== */
+.dash_settings {
+	position: relative;
+	top: -10px;
+	right: 30px;
+	float: right;
+	margin: 20px 0 0 0;
+	width: 36px;
+	height: 36px;
+	background: $orange;
+	@include rounded(10px);
+	cursor: pointer;
+}
+
+.dash_settings:hover { background: lighten($orange, 10%); }
+.dash_settings:active { background: darken($orange, 15%); }
+
+.gear_menu {
+	display: none;
+	position: absolute;
+	top: 60px;
+	right: 0px;
+	z-index: 10001;
+
+	ul > li {
+		padding: 10px 20px 10px 10px;
+		width: 140px;
+		font-size: 1.125em;
+		text-align: right;
+		color: #ffffff;
+		border-top: 1px solid #2d3030;
+		background: $gray;
+		@include transition(background, .2s, ease-in-out);
+		cursor: pointer;
+
+		&:hover { background: lighten($gray, 15%); }
+		&:active { color: #ccc; background: lighten($gray, 30%); }
+	}
+
+	span { font-size: em(11); color: #ccc; }
+}
+
+.gear-icon-wrap { position: relative; top: -15px; }
+
+.gear-icon {
+	position: relative;
+	display: inline-block;
+	left: -30px;
+	margin: 15px 30px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	text-align: center;
+	background: $orange;
+	z-index: 1;
+	color: #fff;
+	cursor: pointer;
+}
+
+.gear-icon:after {
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	border-radius: 5%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+
+.gear-icon:before { display: block; }
+
+.gear-icon {
+	box-shadow: 0 0 0 4px rgba(255,255,255,1);
+	// box-shadow: 0 0 0 4px rgba(248,248,248,1);
+	-webkit-transition: background 0.2s, color 0.2s;
+	transition: background 0.2s, color 0.2s;
+}
+
+.gear-icon:hover {
+	color: #64bb5d;
+	-webkit-animation: spinAround 2s linear infinite;
+	animation: spinAround 2s linear infinite;
+}
+
+.gear-icon,
+.gear-icon:hover ,
+.gear-icon:before,
+.gear-icon-cog:before,
+.gear-icon:hover:before { background: url('/static/img/dashboard/home/gear-mask.png'); }

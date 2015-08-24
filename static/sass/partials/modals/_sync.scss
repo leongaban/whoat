@@ -1,0 +1,41 @@
+/*  SYNC MODAL THIS NEEDS TO BE DELETED.....
+====================================================
+==================================================== */
+
+
+/* Window 2 Exchange Snarf Input fields
+==================================== */
+#sync_exchange_snarf {
+	display: none;
+
+	input {
+		float: left;
+		padding: 5px 10px;
+		width: 427px;
+		height: 32px;
+		font-size: em(20);
+		color: #787b7b;
+		border: 2px solid #e8e8e8;
+	}
+
+	input:first-child { margin-bottom: 15px; }
+}
+
+#exchange_inputs {
+	display: none;
+	position: relative;
+	height: 165px;
+	z-index: 3;
+}
+
+.exchanged_advanced,
+.exchanged_simple {
+	float: left;
+	color: #666;
+	line-height: em(24);
+	text-decoration:underline;
+	cursor: pointer;
+}
+
+.exchanged_advanced:hover,
+.exchanged_simple:hover { text-decoration:none; }

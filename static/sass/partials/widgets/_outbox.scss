@@ -1,0 +1,228 @@
+/* Outbox List View
+============================================================== */
+// need to refactor:
+.td_outbox_icon {
+	width: 1%;
+
+	div { margin-bottom: 7px; }
+
+	p { font-size: em(10); text-align: center; }
+
+	a {
+		color: $gray;
+		text-decoration:none;
+	}
+
+	p:first-child { margin-bottom: 4px; }
+}
+
+.tbody_outbox { font-size: em(14); }
+
+.outbox_declined,
+.outbox_accepted,
+.outbox_pending { width: 35px; height: 25px; }
+.outbox_declined { background-position: -80px -400px; }
+.outbox_accepted { background-position: -80px -360px; }
+.outbox_pending { background-position: -80px -320px; }
+.outbox_gray_hands,
+.outbox_blue_hands { width: 24px; height: 20px; }
+.outbox_gray_hands { color: #ccc; background-position: -9px -130px; }
+.outbox_blue_hands { background-position: -9px -170px; }
+
+.outbox_td_name {
+	padding-top: 10px;
+	li:first-child { font-size: 1em; }
+}
+
+.center_outbox_details_left { margin: 0 auto; }
+
+.i_want_to_meet { width: 30%; }
+
+.outbox_td_status {
+	width: 130px;
+
+	li { float: left; margin-left: 10px; }
+
+	em { float: left; margin: 0 5px 0 2px; font-family: LatoBold; font-size: em(13) !important; line-height: 18px; }
+
+	ul { position: relative; top: 10px; vertical-align: middle; height: 18px; }
+
+	p { display: block; padding-left: 24px; width: 100%; line-height: 1.30em; }
+
+	a { color: $gray; text-decoration: none; }
+}
+.status_icon { float: left; }
+
+.outbox_td_status_none_accepted,
+.outbox_td_status_none_denied,
+.outbox_td_status_pending,
+.outbox_td_status_denied,
+.outbox_td_status_accepted 		{ width: 19px; height: 18px; }
+.outbox_td_status_none_accepted { background-position: -1px -81px; }
+.outbox_td_status_none_denied 	{ background-position: -20px -81px; }
+.outbox_td_status_pending 		{ background-position: -40px -80px; }
+.outbox_td_status_denied 		{ background-position: -20px -99px; }
+.outbox_td_status_accepted 		{ text-align: center; background-position: -1px -99px; }
+
+.center_icons_outbox,
+.center_icons_friend {
+	margin: 0 auto;
+	padding-top: 5px;
+	width: 65px;
+	height: 15px;
+	vertical-align: middle;
+}
+
+.center_icons_outbox {
+	position: relative;
+	top: 10px;
+	padding: 0;
+	width: 100px;
+	height: 0;
+}
+
+// Trashcan
+.trashcan_mask {
+	float: right;
+	position: relative;
+	top: -10px;
+	left: 40px;
+	width: 31px;
+	height: 34px;
+	overflow: hidden;
+}
+
+.trashcan { 
+	display: none;
+	position: relative;
+	left: -24px;
+	// width: 31px;
+	width: 55px;
+	height: 34px;
+	background-position: -120px -320px;
+	cursor: pointer;
+}
+
+.outbox_friend_pending,
+.outbox_friend_accepted { margin-left: 7px; width: 28px; height: 23px; }
+.outbox_friend_pending  { background-position: -126px -447px; }
+.outbox_friend_accepted { background-position: -88px -447px; }
+
+.friend_outbox_status {
+	.accepted { color: $orange; }
+	.status_icon { margin-top: 15px; }
+	p { margin: 17px 0 -17px 0; font-size: em(12); }
+}
+
+/* Outbox Details
+============================================================== */
+#my_request_details {
+	li { margin-bottom: 5px; }
+
+	header { height: 50px; }
+
+	h3 { float: left; margin: 20px 0 0 20px; }
+}
+
+.request_details { border-top: 1px solid #e0e0e0; }
+
+.my_request_meta {
+	float: right;
+	margin: 20px 0 10px 0;
+	font-size: em(10);
+
+	li, div, p { float: left; }
+
+	li { margin: 0 10px; }
+
+	p { margin-left: 2px; line-height: em(30); }
+}
+
+.outbox_details_left,
+.outbox_details_right { float: left; }
+.outbox_details_left { padding: 2em 2em 0 2em; max-width: 300px; }
+.outbox_details_right { width: 50%; min-height: 200px; border-left: 1px solid #e0e0e0; }
+
+.who_i_want_to_meet, .my_message  {
+	position: relative;
+	float: left;
+	padding: 20px;
+	margin: 0;
+	height: 100%;
+	li:first-child { font-family: LatoBold; font-size: em(13); }
+}
+
+.who_i_want_to_meet {
+	li { font-size: em(12); }
+	li:nth-child(2) { font-size: em(26); color: #006497; }
+}
+
+.my_message {
+	margin-top: 2em;
+	li:nth-child(3) { font-size: em(11); }
+}
+
+// My request responses row
+.no_responses { padding: 10px 0; text-align: center; font-family: LatoBold; color: $lgray; }
+
+// NameGame bug
+.outbox_responses {
+	.name_game_bug { position: relative; top: 4px; left: 4px; }
+
+	thead td { line-height: 20px; }
+}
+
+.outbox_details_name_game {
+	// Names
+	td:nth-child(2) { width: 35%; }
+	// Titles
+	td:nth-child(3) { width: 28%; }
+
+	tbody {
+		td { padding: 5px; font-size: em(12); }
+	}
+}
+
+.response_row {	
+	td { vertical-align: middle; padding-top: 10px; border-left: 1px solid #e0e0e0; border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+	td:first-child,
+	td:last-child { border-left: none; border-right: none; }
+}
+
+.outbox_accepted_row .name_game p {
+	color: $orange;
+	text-decoration: underline;
+	cursor: pointer;
+	&:hover { text-decoration: none; }
+}
+
+.response_icon {
+	width: 20px;
+	max-width: 20px;
+	div { margin: 8px 0 0 4px; }
+}
+.response_name  { width: 20%; }
+.response_vcard { width: 20px;}
+.response_date  {
+	width: 60px;
+	font-size: em(12);
+}
+
+.delcined_row {
+	.response_icon { padding-top: 0; padding-right: 15px; }
+	.response_name,
+	.response_vcard { background: #f8f8f8; }
+}
+
+.outbox_details_vcard {
+	margin: 10px 0 0 10px;
+	width: 18px;
+	height: 21px;
+	background-position: -60px -174px;
+	border: 1px solid white;
+	cursor: pointer;
+	&:hover { border: 1px solid $orange; }
+}
+
+.outbox_details_accepted_icon { width: 16px; height: 12px; background-position: -140px -26px; }
+.outbox_details_declined_icon { width: 18px; height: 18px; background-position: -20px -99px; }

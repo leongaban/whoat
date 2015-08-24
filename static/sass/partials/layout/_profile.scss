@@ -1,0 +1,228 @@
+/*  PROFILE
+====================================================
+==================================================== */
+.profile_widget .widget_lid { span { font-size: 16px; } }
+
+/*  Profile Pic / Avatar Area
+====================================================*/
+#my_profile 		 { padding: 15px; }
+
+.current_avatar_area { width: 100%; @include noselect(); }
+.preview_pane 		 { float: left; width: 150px; }
+.preview_container 	 { width: 130px; height: 130px; }
+
+#current_avatar {
+	margin: 10px 0 5px 0;
+	padding: 10px;
+	text-align: center;
+	background: #d7d7d7;
+	cursor: pointer;
+	background-image: url(/assets/img/dashboard/profile/avatar_med.png);
+	background-repeat: no-repeat;
+	background-size: 130px 130px;
+	background-position: center;
+	&:hover { background: lighten(#d7d7d7, 3%); background-position: center; }
+
+	img { width: 130px; height: 130px; }
+}
+
+.preview_details {
+	float: left;
+	margin: 55px 0 0 20px;
+	h2 { font-size: 1em; color: $orange; }
+}
+
+// PROFILE MODALS
+.make_primary_email,
+.reset_password_modal {
+	display: none;
+	position: absolute;
+	top: 15%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 40px;
+	width: 360px;
+	background: white;
+	z-index: 5;
+
+	h1 {
+		margin-bottom: 30px;
+		font-family: LatoThin;
+		font-size: em(32);
+		text-align: center;
+		color: $blue;
+	}
+
+	label { font-family: LatoRegular; color: $blue; }
+
+	input { margin: 10px 0 15px 0; width: 317px;
+		&:focus { outline: 2px solid $orange; background: lighten(#f8f8f8, 1%); }
+	}
+}
+
+// Reset Password
+.reset_password_modal 	{ height: 347px; }
+
+// Make Primary Email
+.make_primary_email 	{ height: 264px; }
+
+.close_reset_pass_modal,
+.close_make_primary_modal {
+	float: left;
+	margin-top: 10px;
+	cursor: pointer;
+	&:hover { text-decoration: underline; }
+}
+
+.reset_pass_btn,
+.make_primary_btn { float: right; background: $orange; }
+
+// NEED THIS LATER...
+#hover_upload {
+	display: block;
+	position: relative;
+	top: -20px;
+	padding: 10px 10px 10px 0;
+	width: 260px;
+	text-decoration: underline;
+	color: $blue;
+	background: white;
+	cursor: pointer;
+}
+
+#hover_upload:hover { text-decoration: none; }
+
+#upload_new_pic_btn {
+	display: none; margin-top: -3px; background: $orange;
+	&:hover { background: lighten($orange, 10%); }
+}
+
+#choose_file { position: relative; top: 10px; left: 18px; border:none; }
+
+
+/*  Profile Details Area
+====================================================*/
+.profile_details_area {
+	margin-top: 40px;
+	width: 100%;
+
+	header 				{ margin-bottom: 10px; }
+
+	h3 					{ font-family:LatoThin; font-size: em(24); }
+
+	input,
+	.password_container { margin: 10px 0 15px 0; width: 100%; max-width: 300px; }
+
+	input:focus 		{ outline: 2px solid $orange; background: lighten(#f8f8f8, 1%); }
+
+	.required   		{ font-family: LatoBold; color: $blue; }
+	.extra_info 		{ margin-top: 10px; font-size: em(11); line-height: em(20); }
+	.hr_spacer  		{ margin: 20px 0; }
+}
+
+.firefox_hr {
+	display: none;
+	margin: 10px 0;
+	height: 2px;
+	background: #e0e0e0;
+}
+
+.password_container 	{ padding: 0 20px; height: 38px; line-height: 35px; border: 2px solid #e8e8e8; }
+
+.profile_left_column,
+.profile_right_column 	{ float: left; width: 46%; }
+.profile_left_column  	{ margin-right: 40px; }
+
+.green_phone_icon,
+.green_groups_icon 		{ float: left; margin-right: 10px; }
+.green_phone_icon  		{ width: 20px; height: 26px; background-position: -50px -408px; }
+.green_groups_icon 		{ width: 28px; height: 28px; background-position: -7px -446px; }
+.green_admin_panel 		{ width: 25px; height: 26px; background-position: -48px -447px; }
+
+.profile_fields,
+.profile_links 	   		{ padding: 25px 25px 25px 0; }
+.profile_fields    		{ span ul { max-width: 320px; } }
+.password_bullets  		{ width: 100px; }
+
+.password_reset 		{ float: right; margin: -31px -16px; padding: 5px 12px; width: 35px; height: 20px; color: white; line-height: 20px; cursor: pointer; }
+
+#btn_join_group 		{ position: relative; top: 1px; padding: 13px; color: white; border: none; cursor: pointer; }
+
+.password_reset,
+#btn_save_profile,
+#btn_join_group,
+#btn_email_proxy {
+	background: $orange;
+	&:hover { background: lighten($orange, 10%); }
+}
+
+#btn_email_proxy {
+	padding: 13px 20px;
+}
+
+.profile_contact_select {
+	overflow: hidden;
+	margin: 8px 0 20px 0;
+	padding: 5px 20px 5px 20px;
+	width: 90%;
+	max-width: 305px;
+	height: 34px;
+	color: #000;
+	background: rgba(0, 0, 0, 0);
+	border: 2px solid #E8E8E8;
+
+	.dropdown_arrow {
+		float: right;
+		position: relative;
+		top: 10px;
+		left: 10px;
+		width: 16px;
+		height: 14px;
+		background-position: -120px -240px;
+	}
+
+	select {
+		position: relative;
+		top: -15px;
+		padding: 5px;
+		width: 100%;
+		max-width: 330px;
+		height: 34px;
+		font-size: 16px;
+		line-height: 1;
+		border: 0;
+		border-radius: 0;
+		-webkit-appearance: none;
+		background: transparent;
+	}
+}
+
+.email_label_li {
+	max-width: 340px;
+}
+
+.make_primary {
+	float: right;
+	font-size: em(12);
+	color: $blue;
+	text-decoration: underline;
+	cursor: pointer;
+	&:hover { text-decoration: none; }
+}
+
+.remove_info,
+.remove_group,
+.remove_proxy {
+	position: relative;
+	top: -46px;
+	left: 319px;
+	width: 18px;
+	height: 18px;
+	background-position: -40px -142px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+.onoffswitch { margin-top: 15px; }

@@ -1,0 +1,273 @@
+/*  RESPONSIVE MEDIA QUERIES
+====================================================
+==================================================== */
+
+/* 1400
+==================================================== */
+@media all and (max-width: 1100px) {
+	.get_guides_left {
+		width: 420px;
+	}
+
+	.call_to_action_left {
+		margin-left: 40px;
+	}
+
+	.call_to_action_right {
+		margin-right: 40px;
+	}
+}
+
+@media all and (max-width: 1020px) {
+	.get_guides_left {
+		width: 360px;
+	}
+
+	.get_guides_right {
+		margin-left: 40px;
+	}
+
+	.call_to_action_left {
+		margin-top: 20px;
+	}
+
+	.call_to_action_right p {
+		font-size: em(18);
+	}
+}
+
+@media all and (max-width: 960px) {
+	.download_types h1 {
+		font-size: em(40);
+	}
+}
+
+@media all and (max-width: 860px) {
+
+	.get_guides_left {
+		float: none;
+		width: 100%;
+	}
+
+	.get_guides_right {
+		float: none;
+		width: 100%;
+	}
+
+	.handshake {
+		width: 350px;
+	}
+
+	.download_types h1 {
+		font-size: em(40);
+	}
+
+	.call_to_action_left {
+		float: none;
+		margin: 0 auto;
+		margin-left: 26%;
+	}
+
+	.call_to_action_right {
+		float: none;
+		margin: 0 auto;
+		padding: 0 40px;
+		// width: 80%;
+	}
+}
+
+@media all and (max-width: 860px) {
+	.get_guides {
+		padding-bottom: 40px;
+	}
+
+	.get_guides_content {
+		width: 60%;
+	}
+
+	.handshake {
+		display: none;
+	}
+}
+
+@media all and (max-width: 720px) {
+
+	header {
+		height: 70px;
+	}
+
+	header li {
+		margin-right: 20px;
+	}
+
+	header nav {
+		margin: 12px auto;
+	}
+
+	.get_guides {
+		width: 640px;
+	}
+	
+	.get_guides_content {
+		width: 100%;
+	}
+
+	.call_to_action_left {
+		margin: 0 40px;
+		width: 100%;
+		position: relative;
+		left: 100px;
+	}
+}
+
+@media all and (max-width: 640px) {
+
+	body {
+		width: 100%;
+		width: 640px;
+	}
+
+	.landing_container {
+		width: 640px;
+		max-width: 640px;
+
+		// background: brown;
+	}
+
+	header {
+		box-shadow: none;
+		width: 640px;
+
+		nav {
+			display: none;
+		}
+	}
+
+	.whoat_logo {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.hide_mobile {
+		display: none;
+	}
+
+	.container {
+		/* margin: 0 auto; */
+		margin: 10px;
+		padding: 0 10px;
+		/* max-width: 1200px; */
+		// width: 320px;
+	}
+
+	.recruit_military {
+		width: 245px;
+		height: 39px;
+		background-size: 300px 300px;
+	}
+
+	.hero {
+		margin: 0 auto;
+		width: 540px;
+
+		p {
+			font-size: 1.25em;
+		}
+	}
+
+	.get_guides {
+		margin: 0 auto;
+		width: 100%;
+		width: 640px;
+		display: none;
+	}
+
+	.get_guides_small {
+		display: block;
+
+		ul {
+			margin: 0 auto;
+			width: 335px;
+		}
+	}
+
+	.call_to_action_content {
+		max-width: 640px;
+	}
+
+	.iphone_button {
+		margin: 0 auto;
+		width: 200px;
+		-webkit-border-top-left-radius: 6px;
+		-webkit-border-bottom-left-radius: 6px;
+		-moz-border-radius-topleft: 6px;
+		-moz-border-radius-bottomleft: 6px;
+		border-top-left-radius: 6px;
+		border-bottom-left-radius: 6px;
+
+		-webkit-border-top-right-radius: 6px;
+		-webkit-border-bottom-right-radius: 6px;
+		-moz-border-radius-topright: 6px;
+		-moz-border-radius-bottomright: 6px;
+		border-top-right-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+
+	.iphone_white {
+		margin-right: 20px;
+	}
+
+	.pdf_icon {
+		margin: 6px 0 0 75px;
+	}
+
+	.get_guides_content {
+		width: 640px;
+	}
+
+	.download_types {
+		display: none;
+	}
+
+	.download_types h1 {
+		font-size: 1.5em;
+	}
+
+	.download_on_mobile {
+		display: block;
+		margin: 1px;
+		width: 60%;
+		color: white;
+		font-size: .75em;
+		h1, .iphone_button {
+			margin-top: 20px;
+		}
+	}
+
+	.app_store {
+		width: 140px;
+	}
+
+	.register_online {
+		display: block;
+	}
+
+	.call_to_action_right {
+		margin: 1px;
+		// width: 50%;
+	}
+
+	// .footer_desktop {
+	// 	display: none;
+	// }	
+
+	// .footer_mobile {
+	// 	display: block;
+	// 	margin: 0 auto;
+	// 	padding-bottom: 20px;
+	// 	width: 100%;
+	// 	height: 100px;
+	// 	max-width: 640px;
+	// }
+}
+

@@ -1,0 +1,240 @@
+/*  INTRO VCARD MODAL
+====================================================
+==================================================== */
+#intro_modal {
+	display: none;
+	position: absolute;
+	// max-height: 440px;
+	max-height: 515px;
+	overflow: auto;
+	top: 10%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 30px;
+	width: 420px;
+	height: auto;
+	background: white;
+	z-index: 10002;
+	@include box-shadow(0 1px 5px rgba(0, 0, 0, 1));
+
+	textarea { margin: 10px 0; padding: 10px 0 10px 10px; width: 438px; height: 80px; font-family: LatoLight; font-size: 1em; color: #666; }
+
+	.commision_tag { margin: -17px 0 0 25px; }
+}
+
+.close_intro_x {
+	position: absolute;
+	top: -30px;
+	right: 0px;
+	width: 22px;
+	height: 22px;
+	background-position: -401px -41px;
+	cursor: pointer;
+}
+
+#intro_vcard {
+	display: block;
+	header { height: 60px; font-family: LatoLight; }
+	.username { font-size: em(26); color: $blue; }
+	.title,
+	.company { color: #444; }
+}
+
+#intro_contact_details {
+	height: 90px;
+	// overflow: hidden;
+	ul { float: left; max-width: 270px; }
+	li { line-height: em(20); }
+	.company { font-size: em(12); }
+}
+
+.intro_modal_avatar {
+	float: left;
+	margin-right: 20px;
+	width: 64px;
+	height: 64px;
+	border: 2px solid $orange;
+	background-position: -250px -88px;
+
+	img { width: 64px; height: 64px; }
+}
+
+// .contact_details_actions {
+// 	float: right;
+
+// 	.add_friend { padding: 10px 23px; }
+// 	.invited {
+// 		display: none;
+// 		margin: 0;
+// 		@include noselect();
+// 	}
+// 	.unfriend { padding: 10px 14px; background: lighten($lgray, 10%); }
+// }
+
+.btn_hide {
+	float: right;
+	padding: 10px 14px;
+	font-size: em(12);
+	background: lighten($lgray, 10%);
+	&:hover { color: $lgray; background: lighten($lgray, 20%); }
+}
+
+.btn_show {
+	float: right;
+	padding: 10px 13px;
+	font-size: em(12);
+	background: $gray;
+	&:hover { background: lighten($gray, 10%); }
+}
+
+.show_unfriend_button,
+.show_friend_button,
+.hide_contact_button,
+.show_contact_button { display:none; margin-top: 8px; }
+
+/* VCARD details
+=============================== */
+.vcard_details_section { display: none; float: left; margin: 10px 0; width: 450px; }
+
+#vcard_table {
+	float: left;
+	margin-bottom: 10px;
+	width: 100%;
+	height: auto;
+
+	td { padding: 5px 0; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+}
+
+.vcard_email_icon,
+.vcard_phone_icon { margin: 0 auto; }
+.vcard_email_icon { width: 10px; height: 16px; background-position: -320px -104px; }
+.vcard_phone_icon { width: 16px; height: 12px; background-position: -344px -104px; }
+
+.vcard_data {
+	border-left: 1px solid #e0e0e0;
+
+	a {
+		margin-left: 20px;
+		color: $orange;
+		text-decoration: none;
+		&:hover { text-decoration: underline; }
+	}
+}
+
+/* INTRO MODAL
+=============================== */
+.injected_div { display: block; margin: 20px 0; }
+
+#intro_network_selection { display: block; margin: 30px 0; width: 450px; }
+
+.target_copy {
+	font-family: LatoBold;
+	color: #666;
+	line-height: em(24);
+	hr { margin-top: 10px; height: 1px; }
+}
+
+.target_info {
+	float: left;
+	padding-bottom: 10px;
+	width: 50%;
+	color: #666;
+	li { line-height: em(20); }
+	td:first-child { position: relative; top: -20px; }
+}
+
+.select_networks {
+	float: right;
+
+	ul > li {
+		float: right;
+		position: relative;
+		top: -15px;
+		margin: 20px 0 0 10px;
+		padding: 10px;
+		width: 40px;
+		font-size: 10px;
+		text-align: center;
+		background: #f8f8f8;
+		border: 1px solid white;
+		cursor: pointer;
+		@include rounded(4px);
+
+		&:hover { border: 1px solid #e0e0e0; background: white; }
+
+		div { margin: 0 auto; }
+
+		p { margin-top: 5px; }
+	}
+
+	#network_friends,
+	#network_groups,
+	#network_company { display: none; }
+}
+
+.organization_count,
+.group_count,
+.friend_count { position: absolute; top: 20px; left: 40px; }
+
+/* COMBO with GROUPS
+=============================== */
+#sub_groups {
+	display: none;
+	margin-bottom: 40px; // +20px for every row
+	clear: both;
+
+	li { float: left; margin: 0 10px 5px 0; }
+}
+
+.orange_hr_line { margin-bottom: 10px; border: 0; height: 2px; background: $orange; }
+
+.groups_check_row {
+	p { float: left; margin-top: 2px; }
+}
+
+.close_sub_groups {
+	float: right;
+	position: relative;
+	top: -2px;
+	padding: 5px 10px;
+	color: white;
+	border: 0;
+	background: $orange;
+	cursor: pointer;
+	
+	&:hover { background: lighten($orange, 10%); }
+}
+
+.intro_request_message {
+	display: block;
+	hr { border: 0; height: 1px; background: #e0e0e0; }
+}
+
+#comission_sharing { float: left; margin: 10px 0; }
+
+#btn_send_request {
+	float: right;
+	background: $orange;
+	&:hover { background: lighten($orange, 10%); }
+}
+
+/* NameGame Results (outbox details)
+=============================== */
+.outbox_details_name_game {
+	display: none;
+
+	header {
+		float: left;
+		margin: -3px 0 10px 0;
+		padding: 10px 0 0 10px;
+		width: 100%;
+		height: 25px;
+		background: #757575;
+	}
+	
+	h2 { margin: 0 0 20px 0; font-size: em(18); }
+
+	h3 { color: white; }
+}

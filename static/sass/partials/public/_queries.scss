@@ -1,0 +1,162 @@
+/*  RESPONSIVE MEDIA QUERIES
+====================================================
+==================================================== */
+
+/* 1600
+==================================================== */
+@media all and (max-width: 1600px) {
+	// Intro
+	.intro_container 	{ width: 70%; }
+}
+
+/* 1400
+==================================================== */
+@media all and (max-width: 1400px) {
+	// Hero
+	.tagline 			{ h1 { width: 80%; }}
+
+	// Intro
+	.intro_container 	{ width: 70%; }
+
+	// NameGame
+	.namegame_container { margin: 0 auto; width: 65%; height: 100%; }
+	.namegame_couple 	{ width: 40%; img { width: 332px; height: 533px; }}
+	.namegame_details 	{ margin-left: 30px; width: 55%; ul { margin-top: 30%; vertical-align: middle; }}
+}
+
+/* 1300
+==================================================== */
+@media all and (max-width: 1300px) {
+	// Intro
+	.intro_container 	{ width: 960px; }
+	.intro_details 		{ width: 500px; }
+}
+
+/* 1200
+==================================================== */
+@media all and (max-width: 1200px) {
+	// Intro
+	.intro_container,
+	.namegame_container { width: 800px; }
+	.iphone img 		{ width: 250px; height: 445px; }
+	.intro_details 		{ width: 500px; ul { margin-top: 20px; }}
+	.arrow_to_namegame 	{ bottom: -330px; }
+
+	// Name Game
+	#namegame_area 		{ h1, h2 { font-size: em(30); }}
+	.namegame_couple 	{ width: 332px; }
+	.namegame_details 	{ width: 400px; }
+}
+
+/* 1100
+==================================================== */
+@media all and (max-width: 1100px) {
+	// Intro
+	#intro_app_area 	{ h1, h2 { font-size: em(28); }}
+	.intro_container,
+	.namegame_container { width: 760px; }
+	.iphone img 		{ width: 250px; height: 445px; }
+	.intro_details 		{ width: 480px; }
+
+	// Name Game
+	#namegame_area 		{ h1, h2 { font-size: em(24); line-height: em(20); }}
+	.namegame_details 	{ width: 380px; }
+
+	// About
+	.about_container {
+		width: 100%;
+	}
+}
+
+/* 1000
+==================================================== */
+@media all and (max-width: 1000px) {
+	// Intro
+	.intro_container,
+	.namegame_container { width: 800px; }
+	.iphone img 		{ width: 250px; height: 445px; }
+	.intro_details 		{ width: 500px; }
+}
+
+/* 960
+==================================================== */
+@media all and (max-width: 960px) {
+	// Hero
+	.gradient 			{ height: 410px; }
+	.hero 				{ margin-top: 130px; }
+	.tagline 			{ height: 280px; }
+
+	// Intro
+	.intro_container 	{ width: 760px; }
+	.intro_details 		{ margin-left: 30px; width: 420px; }
+}
+
+
+/* 900
+==================================================== */
+@media all and (max-width: 900px) {
+
+	//Nav
+	header nav {
+		font-size: em(14);
+
+		li {
+			margin-right: 20px;
+		}
+	}
+
+	// Hero
+	.tagline {
+		height: 240px;
+		h1 				{ padding-top: 35px; font-size: em(36); }
+		button 			{ padding: 10px 20px; font-size: em(21); }
+	}
+
+	// Intro
+	.intro_container,
+	.namegame_container { width: 680px; }
+	#intro_app_area 	{
+		h1, h2 			{ font-size: em(24); }
+		h2 				{ margin: 25px 0; }
+	}
+
+	.intro_details 		{ margin-left: 30px; width: 360px; }
+
+	// Name Game
+	#namegame_area {
+		h1, h2 			{ font-size: em(24); line-height: em(20); }
+	}
+
+	.namegame_couple 	{ width: 260px; img { width: 250px; }}
+}
+
+/* 800
+==================================================== */
+@media all and (max-width: 800px) {
+	
+	// Intro
+	.intro_container,
+	.namegame_container { width: 680px; }
+	.intro_details 		{ margin-left: 20px; width: 400px; }
+}
+
+/* 768
+==================================================== */
+@media all and (max-width: 768px) {
+	
+	// Intro
+	.intro_container,
+	.namegame_container { width: 700px; }
+	.intro_details 		{ margin-left: 20px; width: 400px; }
+
+	// Register & Login
+	.login_tab 			{ li { width: 160px; }}
+	#login_form,
+	#register_form,
+	#forgot_password,
+	#reset_password 	{ width: 360px; input { width: 260px; height: 40px; font-size: 1em; }}
+	.register_box 		{ position: relative; top: 0; left: 0; margin: 100px auto 0 auto; width: 360px; height: 410px; }
+	.mini_footer 		{ ul { width: 25%; }}
+
+	footer 				{ display: none; }
+}

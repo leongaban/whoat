@@ -1,0 +1,29 @@
+/*  SVG background images
+====================================================
+==================================================== */
+
+// SVG for topbar
+.whoat_logo,
+.arrow_to_intro,
+.intro_logo,
+.app_store,
+.hero_glow,
+.arrow_to_namegame,
+.namegame_logo,
+// About
+.about_hand_shake,
+.about_phone_bubbles,
+
+// Video
+.big_x,
+
+// Login & Register
+.x {
+	background-image: url(/static/img/public/web.svg), none;
+	background-size: 1600px 1600px;
+}
+
+.beta {
+	background-image: url(/static/img/public/beta.svg), none;
+	background-size: 45px 23px;
+}

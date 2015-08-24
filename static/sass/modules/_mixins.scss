@@ -1,0 +1,206 @@
+/* PIXELS to EM */
+// eg. for a relational value of 12px write em(12) when the parent is 16px
+// if the parent is another value say 24px write em(12, 24)
+
+// @include em(12);
+$em-base: 16;
+@function em($pxval, $base: $em-base) {
+    @if not unitless($pxval) {
+        $pxval: strip-units($pxval);
+    }
+    @if not unitless($base) {
+        $base: strip-units($base);
+    }
+    @return ($pxval / $base) * 1em;
+}
+
+@mixin noselect() {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+}
+
+// @include transition(background, .2s, ease-in-out);
+@mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}
+
+// @include box-shadow(0 5px 15px rgba(50, 50, 50, 0.2));
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    box-shadow: $value;
+}
+
+// @include rounded(4px);
+@mixin rounded($radius: 10px) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// @include bgcover;
+@mixin bgcover() {
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// @include linear-gradient(to top, red, orange);
+@function linear-gradient($pos, $gradients...) {
+    $type: linear;
+    $pos-type: type-of(nth($pos, 1));
+
+    // if $pos doesn't exist, fix $gradient
+    @if ($pos-type == color) or (nth($pos, 1) == "transparent")  {
+        $gradients: zip($pos $gradients);
+        $pos: false;
+    }
+
+    $type-gradient: $type, $pos, $gradients;
+    @return $type-gradient;
+}
+
+/* COLORS & OPACITY */
+// color:orange(0.9);
+@function orange($opacity) {
+    @return rgba(245,135,51,$opacity)
+}
+
+@function blue($opacity) {
+    @return rgba(0,100,151,$opacity)
+}
+
+@function orange($opacity) {
+    @return rgba(245,135,51,$opacity)
+}
+
+@function green($opacity) {
+    @return rgba(151,179,83,$opacity)
+}
+
+@function black($opacity) {
+    @return rgba(0,0,0,$opacity)
+}
+
+@function white($opacity) {
+    @return rgba(255,255,255,$opacity)
+}
+
+// @include opacity(0);
+@mixin opacity($decimal,$whole) {
+    opacity: $decimal;
+    filter: alpha(opacity=$whole);
+}
+
+// @include vertical-align;
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// @include box-emboss(0.8, 0.05);
+@mixin box-emboss($opacity, $opacity2){
+    box-shadow:white($opacity) 0 1px 0, inset black($opacity2) 0 1px 0;
+}
+
+// @include clearfix;
+@mixin clearfix {
+    &:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
+}
+
+// UtilityBelt - a starter kit for any SASS project
+// By @dmtintner & @hackingui
+// Documentation and examples @ hackingui.com/front-end/10-best-scss-utilities/
+
+/* TRIANGLE */
+// @include triangle within a pseudo element and add positioning properties (ie. top, left)
+// $direction: up, down, left, right
+@mixin triangle($direction, $size: 8px, $color: #222) {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0; width: 0;
+    @if ($direction == 'up') {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+    @else if ($direction == 'down') {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+    }
+    @else if ($direction == 'left') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+    }
+    @else if ($direction == 'right') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+    }
+}
+
+/* FROM BOURBON */
+// http://bourbon.io/docs/#font-face
+
+/* FLEXBOX */
+// Flexible grid
+@function flex-grid($columns, $container-columns: $fg-max-columns) {
+    $width: $columns * $fg-column + ($columns - 1) * $fg-gutter;
+    $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+    @return percentage($width / $container-width);
+}
+
+// Flexible gutter
+@function flex-gutter($container-columns: $fg-max-columns, $gutter: $fg-gutter) {
+    $container-width: $container-columns * $fg-column + ($container-columns - 1) * $fg-gutter;
+    @return percentage($gutter / $container-width);
+}
+
+// CSS diagonal stripes
+// background: repeating-linear-gradient(
+//   45deg,
+//   #606dbc,
+//   #606dbc 10px,
+//   #465298 10px,
+//   #465298 20px
+// );
+
+// The $fg-column, $fg-gutter and $fg-max-columns variables must be defined in your base stylesheet to properly use the flex-grid function.
+// This function takes the fluid grid equation (target / context = result) and uses columns to help define each.
+//
+// The calculation presumes that your column structure will be missing the last gutter:
+//
+//   -- column -- gutter -- column -- gutter -- column
+//
+//  $fg-column: 60px;             // Column Width
+//  $fg-gutter: 25px;             // Gutter Width
+//  $fg-max-columns: 12;          // Total Columns For Main Container
+//
+//  div {
+//    width: flex-grid(4);        // returns (315px / 995px) = 31.65829%;
+//    margin-left: flex-gutter(); // returns (25px / 995px) = 2.51256%;
+//
+//    p {
+//      width: flex-grid(2, 4);  // returns (145px / 315px) = 46.031746%;
+//      float: left;
+//      margin: flex-gutter(4);  // returns (25px / 315px) = 7.936508%;
+//    }
+//
+//    blockquote {
+//      float: left;
+//      width: flex-grid(2, 4); // returns (145px / 315px) = 46.031746%;
+//    }
+//  }

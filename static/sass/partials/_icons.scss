@@ -1,0 +1,209 @@
+/*  SVG ICONS
+====================================================
+==================================================== */
+
+// SVG for ftue & tour
+.close_tour_x,
+.tour_nav_blue,
+.tour_nav_white,
+.tour_nav_orange,
+.tour_video_blue,
+.tour_video_white,
+.tour_play_blue,
+.tour_play_orange,
+.tour_lock_blue,
+.tour_lock_white,
+.tour_lock_orange,
+.tour_expand_blue,
+.tour_expand_orange,
+.tour_alerts_blue,
+.tour_alerts_orange,
+.tour_cloud_blue,
+.tour_cloud_white,
+.tour_cloud_orange,
+.snarfed_check,
+.snarf_lock_hover,
+.small_exchange_icon,
+.small_gmail_icon,
+.alerts_head_icon,
+.blue_delete,
+
+// for sync in tour
+.sync_modal_lock,
+.exchange_logo,
+.gmail_logo,
+.blue_arrow,
+.close_widget_msg,
+.apple_store_logo,
+.android_store_logo,
+.browser_tool_logo,
+.play_bookmarklet_vid,
+
+// for intro vcard modal
+.intro_modal_avatar,
+.close_intro_x,
+.vcard_email_icon,
+.vcard_phone_icon,
+.check-div-on,
+.check-div-off,
+
+// Topbar
+.whoat_logo_svg,
+.intro_app_logo,
+.app_arrow_down,
+.app_arrow_up,
+.search_button,
+.search_button:hover,
+.search_button:active,
+.browse_dropdown_arrow,
+
+// App Switch Dropdown
+.switch_intro_on,
+.switch_intro_off,
+.switch_namegame_on,
+.switch_namegame_off,
+.switch_wishlist_on,
+.switch_wishlist_off,
+.switch_admin_on,
+.switch_admin_off,
+
+// Sidebar
+.profile_pic,
+.outbox_sidebar_btn.on .outbox_icon,
+.outbox_sidebar_btn .outbox_icon,
+.inbox_sidebar_btn.on .inbox_icon,
+.inbox_sidebar_btn .inbox_icon,
+.reports_icon,
+.reports_sidebar_btn.on .reports_icon,
+.bookmark_gray,
+.blue_question,
+.bookmark_icon,
+.white_outbox_icon,
+.white_inbox_icon,
+.alerts_icon,
+
+// Widgets
+.minimize,
+.expand_widget_icon,
+.alerts_widget_icon,
+.expand_friends,
+
+// Outbox
+.widget_lid_icon,
+.icon_my_requests,
+.icon_their_requests,
+.outbox_declined,
+.outbox_accepted,
+.outbox_pending,
+.outbox_gray_hands,
+.outbox_blue_hands,
+.delete_request,
+.outbox_friend_pending,
+.outbox_friend_accepted,
+.delete_my_request,
+.outbox_td_status_none_accepted,
+.outbox_td_status_none_denied,
+.outbox_td_status_pending,
+.outbox_td_status_accepted,
+.outbox_td_status_denied,
+.outbox_status_pending,
+.outbox_status_accepted,
+.outbox_status_denied,
+.outbox_details_accepted_icon,
+.outbox_details_declined_icon,
+.outbox_details_vcard,
+.member_badge,
+.trashcan,
+
+// Inbox
+.inbox_icon,
+.inbox_icon_pending,
+.inbox_icon_accepted,
+.inbox_icon_send,
+.inbox_friend_icon,
+.inbox_friend_icon_pending,
+.inbox_friend_icon_accepted,
+.td_help,
+.quick_accept,
+.quick_send,
+.quick_deny,
+.quick_accept:hover,
+.quick_deny:hover,
+.delete_their_request,
+.big_accept,
+.big_accept_clicked,
+.big_send,
+.big_send_clicked,
+.big_deny,
+.big_deny_clicked,
+.vcard,
+.vcard_gray,
+.network_contact_icon,
+.network_organization_icon,
+.network_group_icon,
+.network_friend_icon,
+.commission_sharing_on .small_check,
+.name_game_bug,
+.avatar_target,
+.member_icon,
+.invite_avatar,
+.icon_company,
+.small_green_check,
+.manager_message .vcard,
+
+// Friending
+.icon_friend_request,
+.big_accepted_check,
+.big_denied_x,
+.friend_big_pending,
+.friend_avatar img,
+
+// Search
+.icon_contacts_on,
+.icon_company_on,
+.icon_groups_on,
+.icon_friends_on,
+.icon_contacts_off,
+.icon_company_off,
+.icon_groups_off,
+.icon_friends_off,
+.blue_check,
+
+// Sync
+.iphone_logo,
+.android_logo,
+.sync_plus,
+
+// Contact
+.contact_avatar,
+.member_box,
+.mini_whoat,
+
+// Profile
+.green_phone_icon,
+.green_groups_icon,
+.green_admin_panel,
+.remove_info,
+.remove_group,
+.remove_proxy,
+.profile_contact_select .dropdown_arrow,
+
+// Reports
+.check_green,
+.check_red,
+.css-label,
+
+// Errors
+.lost_man {
+	background-size: 1600px 1600px;
+	background-image: url(/static/img/dashboard/icons.svg), none;
+}
+
+.beta {
+	background-image: url(/static/img/public/beta.svg), none;
+	background-size: 45px 23px;
+}
+
+.contact_avatar { background-size: 1200px 1200px; }
+
+.icon_friend_request { width: 30px; }

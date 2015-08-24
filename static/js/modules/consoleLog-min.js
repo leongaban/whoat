@@ -1,0 +1,1 @@
+WHOAT.consoleLog=function(e,t,n){"use strict";function r(){i()}var i=function(e){};return{traceThis:i,init:r}}(jQuery,window);$(document).ready(function(){WHOAT.consoleLog.init()});

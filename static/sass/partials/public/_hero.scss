@@ -1,0 +1,142 @@
+/*  HERO
+====================================================
+==================================================== */
+.gradient {
+	margin-top: -71px;
+	display: inline-block;
+	width: 100%;
+	height: 447px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #ffffff 0%, #f7f7f7 50%, #eaeaea 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#ffffff), color-stop(50%,#f7f7f7), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #ffffff 0%,#f7f7f7 50%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #ffffff 0%,#f7f7f7 50%,#eaeaea 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #ffffff 0%,#f7f7f7 50%,#eaeaea 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #ffffff 0%,#f7f7f7 50%,#eaeaea 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.hero {
+	position: relative;
+	margin: 167px auto 0;
+	height: auto;
+	text-align: center;
+	vertical-align: bottom;
+	z-index: 2;
+
+    img {
+    	position: relative;
+    	top: 15px;
+		width: 300px;
+		height: 280px;
+		text-align: center;
+		vertical-align: bottom;
+    	border:0;
+	}
+}
+
+.hero_glow {
+	margin: 0 auto;
+	width: 652px;
+	height: 281px;
+	background-position: -685px -143px;
+}
+
+.tagline {
+	position: relative;
+	height: 300px;
+	text-align: center;
+	color: $blue;
+	background: white;
+	z-index: 3;
+
+	h1 {
+		margin: 0 auto;
+		padding-top: 50px;
+		width: 80%;
+		font-size: em(42);
+		text-align: center;
+	}
+
+	em { font-family: LatoRegular; }
+
+	button {
+		margin-top: 25px;
+		padding: 12px 22px;
+		font-family: LatoBold;
+		font-size: em(24);
+		color: white;
+		border: 0;
+		background: $orange;
+		@include rounded(4px);
+
+		&:hover { background: lighten($orange, 10%); }
+	}
+}
+
+.arrow_to_intro {
+	margin: 20px auto 0;
+	width: 36px;
+	height: 24px;
+	background-position: -150px 0px;
+	cursor: pointer;
+
+	&:hover { background-position: -186px 0px; }
+}
+
+#pdf_dropdown {
+	display: none;
+	position: absolute;
+	margin-top: 5px;
+	padding: 10px 0 10px 15px;
+	width: 197px;
+	font-size: 1em;
+	line-height: em(24);
+	background: white;
+	border: 2px solid $orange;
+	z-index: 9;
+
+	li {
+		float: none;
+		&:hover { color: $orange; text-decoration: underline; }
+	}
+}
+
+#getting_started_guide { cursor: pointer; }
+
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: .85;
+	z-index: 4;
+	cursor: pointer; 
+}
+
+// Video Modal
+.video_holder {
+	display: none;
+	position: absolute;
+	// top: 50%;
+	// left: 50%;
+	// margin: -250px 0 0 -200px;
+	padding: 30px;
+	width: 600px;
+	height: 380px;
+	background: white;
+	z-index: 5;
+}
+
+.big_x {
+	position: absolute;
+	top: -34px;
+	left: 637px;
+	width: 23px;
+	height: 23px;
+	background-position: 0px -160px;
+	cursor: pointer;
+}

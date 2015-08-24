@@ -1,0 +1,147 @@
+/*  CONTACTS
+====================================================
+==================================================== */
+.my_contacts_tbody {
+	font-size: em(14);
+	td { padding-left: 5px; }
+	td:first-child { padding-left: 0; }
+	tr:nth-child(even) { background: #fbfbfb; }
+}
+
+.no_contact_results {
+
+	td { padding-bottom: 20px; }
+	p { margin: 15px 0; font-size: em(20); line-height: em(24); }
+	a {
+		color: $orange;
+		&:hover { text-decoration: none; }
+	}
+
+	.security_lock { margin: 0 40px 40px 0; }
+}
+
+.you_no_sync {
+	margin: 1em 0;
+	padding: 15px;
+	font-family: LatoBold;
+	background: #f8f8f8;
+	border: 1px solid $lgray;
+	@include rounded(4px);
+}
+
+.no_contacts_copy { margin-top: 40px; }
+.subheads { padding-top: 5px; height: 20px; text-align: left; }
+.smallhead { font-family: LatoRegular; font-size: em(12); }
+
+.td_contacts_avatar {
+	margin: 0;
+	width: 54px;
+	padding: 10px 0 10px 10px;
+
+	img { width: 44px; height: 44px; }
+	div { margin: 0 !important; line-height: 0 !important; }
+	div img { position: relative; border-color: $orange; }
+}
+
+.member_with_avatar {
+	position: relative;
+	width: 44px;
+	height: 44px;
+	border: 2px solid $orange;
+	&:hover { border: 2px solid lighten($orange, 10%); }
+}
+
+.mini_whoat {
+	position: absolute;
+	top: 35px;
+	left: 35px;
+	width: 12px;
+	height: 13px;
+	background-position: -588px -107px;
+	z-index: 3;
+}
+
+.contact_with_avatar {
+	@extend .member_with_avatar;
+	border: 2px solid $lgray;
+	&:hover { border: 2px solid lighten($lgray, 10%); }
+}
+
+.contact_avatar {
+	width: 44px;
+	height: 44px;
+	background-position: -190px -70px;
+	border: 2px solid $lgray;
+	background: $lgray;
+}
+
+.td_contacts_friend {
+	position: relative;
+	top: 5px;
+	padding-right: 10px;
+	width: 50px;
+
+	button { margin: 0 0 10px 5px; width: 82px; font-size: em(12); }
+}
+
+.add_friend,
+.unfriend { margin-left: 5px; font-size: em(12); }
+
+.add_friend {
+	background: $yellow;
+	&:hover { background: lighten($yellow, 10%); }
+}
+
+.unfriend {
+	padding: 10px 19px;
+	font-size: em(12);
+	color: white;
+	background: lighten($lgray, 10%);
+	&:hover { color: $lgray; background: lighten($lgray, 20%); }
+}
+
+.contact_hidden {
+
+	.member_with_avatar {
+		border: 2px solid lighten($orange, 20%);
+	}
+
+	.contact_with_avatar {
+		border: 2px solid lighten($lgray, 20%);
+	}
+
+	img {
+		opacity: 0.5;
+	}
+	td {
+		color: #ccc;
+	}
+}
+
+.invited {
+	margin: 0 0 10px 5px;
+	padding: 10px 9px;
+	border: 0;
+	color: $gray;
+	font-size: em(12);
+	text-align: center;
+	background: #e0e0e0;
+}
+
+.btn_inviting {
+	padding: 10px 9px;
+	border: 0;
+	background-color: $lgray;
+	animation-delay:500ms;
+	-webkit-animation-delay:500ms;
+	-webkit-transition: background-color 500ms ease-out .5s;
+    -moz-transition: background-color 500ms ease-out .5s;
+    -o-transition: background-color 500ms ease-out .5s;
+    transition: background-color 500ms ease-out .5s;
+}
+
+// In Intro Modal
+#intro_modal {
+	.add_friend,
+	.unfriend { margin-left: 0; }
+}

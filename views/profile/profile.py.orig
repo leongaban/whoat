@@ -1,0 +1,204 @@
+from .. import SmartView
+from pyramid.view import view_config
+import random
+
+
+class Profile(SmartView):
+    template = "member/profile.mak"
+
+    @view_config(route_name="profile", request_method="GET")
+    def get(self):
+        dic = {}
+        member = self.member
+        dic['member'] = member
+        dic['badges'] = self.get_badges()
+        dic['recent'] = self.members.search_history(limit=5)
+        dic['profile'] = member.profile
+        dic['born'] = member.born_on_date
+        dic['enterprise'] = member.is_enterprise_account
+        dic['groups'] = member.groups
+        return self.render(dic)
+
+    @view_config(route_name="save_profile", request_method='POST')
+    def save(self):
+        success_msgs = ['Saved! Thanks for updating!', "Profile Saved, doesn't it feel great to be updated?"]
+        error_msgs = ["Please use valid emails and phone numbers"]
+
+        try:
+            if 'params' in self.body:
+                params = self.body['params']
+            if 'firstName' in params and 'lastName' in params:
+                first_name, last_name = params["firstName"], params["lastName"]
+            if 'organization' in params and 'title' in params:
+                organization, title = params["organization"], params["title"]
+            if 'phones' in params and 'emails' in params and 'deleted' in params:
+                phones, emails, remove = params["phones"], params["emails"], params["deleted"]
+
+            # proxy = params['proxy']
+            # proxy_label = params['proxy_label']
+            #
+            # if proxy == "Admin email here":
+            #     self.member.clear_contact_proxy()
+            # else:
+            #     self.member.set_contact_proxy(proxy, label=proxy_label)
+
+            for e in emails:
+                e['key'] = str(e['key'])
+                e['label'] = str(e['label'])
+                e['tag'] = str(e['tag'])
+
+            for p in phones:
+                p['label'] = str(p['label'])
+                p['tag'] = str(p['tag'])
+
+            for r in remove:
+                r = str(r)
+
+            self.profiles.update(
+                firstName=first_name,
+                lastName=last_name,
+                organization=organization,
+                title=title,
+                emails=emails,
+                phones=phones,
+                remove=remove
+            )
+
+            value = {'result': 'success', 'message': random.choice(success_msgs)}
+        except Exception, err:
+            print err
+            # value = {'result': 'error', 'message': random.choice(error_msgs)}
+            value = {'result': 'error', 'message': err}
+
+        return self.emit_json(value)
+
+    @view_config(route_name="join_group", request_method='GET')
+    @view_config(route_name="join_group", request_method='POST')
+    def join_group(self):
+        table = self.request.POST
+        code = table.keys()[0]
+        code = code.replace('"', '').strip()
+
+        if code is None:
+            value = {'result': 'error', 'message': "Please specify a valid group code."}
+            return self.emit_json(value)
+
+        # code = code.strip()
+        group = self.ctx.groups.get(code)
+        if group is None:
+            value = {'result': 'error', 'message': "Invalid group code."}
+            return self.emit_json(value)
+
+        member = self.member
+        groups = member.groups
+        groups = [g for g in groups if g.id == group.id]
+        if len(groups) > 0:
+            value = {'result': 'error', 'message': "You are already a member of that group."}
+            return self.emit_json(value)
+
+        try:
+            group.subscribe(member)
+            success_msgs = ['Success! You are now a member'+group.label]
+            value = {'result': 'success', 'message': random.choice(success_msgs)}
+            return self.emit_json(value)
+
+        except Exception, ex:
+            print ex.message
+            value = {'result': 'error', 'message': "You cannot join the group at this time."}
+            return self.emit_json(value)
+
+    @view_config(route_name="leave_group", request_method='GET')
+    def leave_group(self):
+        code = self.param("id")
+
+        if code is None:
+            value = {'result': 'error', 'message': "Please specify a valid group code."}
+            return self.emit_json(value)
+
+        group = self.ctx.groups.get(code)
+        if group is None:
+            value = {'result': 'error', 'message': "Invalid group code."}
+            return self.emit_json(value)
+
+        member = self.member
+        groups = member.groups
+        groups = [g for g in groups if g.id == group.id]
+
+        if len(groups) == 0:
+            value = {'result': 'error', 'message': "You are not currently a member of that group."}
+            return self.emit_json(value)
+
+        try:
+            value = {'result': 'success', 'message': 'You are no longer a member of ' + group.label + "."}
+            group.unsubscribe(member)
+            return self.emit_json(value)
+
+        except Exception, ex:
+            print ex.message
+            value = {'result': 'error', 'message': "You cannot leave the group at this time."}
+            return self.emit_json(value)
+
+    @view_config(route_name="avatar_update", request_method='POST')
+    def avatar_update(self):
+        try:
+            image = self.request.POST['datafile']
+            self.ctx.members.update_avatar_image(image.file.read(), self.ctx.member)
+            value = {'result': 'success', 'message': 'Updating Profile Pic! :)'}
+
+        except Exception, ex:
+            print ex.message
+            value = {'result': 'error', 'message': "There was an error with the upload"}
+
+        return self.emit_json(value)
+
+
+class AddedGroup(SmartView):
+    template = "member/added_group.mak"
+
+    @view_config(route_name="show_group", request_method='GET')
+    def show_group(self):
+
+        dic = {}
+        member = self.member
+        dic['groups'] = member.groups
+        return self.render(dic)
+
+
+class UpdatePassword(SmartView):
+
+    @view_config(route_name="update_password", request_method='GET')
+    @view_config(route_name="update_password", request_method='POST')
+    def update_password(self):
+
+        old_pass = str(self.param("old_password"))
+        new_pass = str(self.param("new_password"))
+
+        try:
+            self.ctx.members.change_password(current_password=old_pass, new_password=new_pass)
+            value = {'result': 'success', 'message': "Password updated!"}
+            return self.emit_json(value)
+
+        except Exception, ex:
+            print ex.message
+            value = {'result': 'error', 'message': "Try again, make sure new password matches"}
+            return self.emit_json(value)
+
+
+class MakePrimary(SmartView):
+
+    @view_config(route_name="make_primary", request_method='GET')
+    @view_config(route_name="make_primary", request_method='POST')
+    def make_primary(self):
+
+        new_primary_email = str(self.param("primary_email"))
+        current_password = str(self.param("current_pass"))
+
+        try:
+            self.ctx.members.change_username(email=new_primary_email, password=current_password)
+            value = {'result': 'success', 'message': "Primary Email Updated!"}
+            return self.emit_json(value)
+
+        except Exception, ex:
+            print ex.message
+            value = {'result': 'error', 'message': "Try again, make sure password is correct."}
+            return self.emit_json(value)

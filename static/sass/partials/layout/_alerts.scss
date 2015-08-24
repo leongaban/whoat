@@ -1,0 +1,52 @@
+/*  ALERTS
+====================================================
+==================================================== */
+
+// Alerts Bell
+.alerts_widget_icon {
+	width: 18px;
+	background-position: -182px -240px;
+}
+
+.alerts_widget {
+	h4 a {
+		color: white;
+		&:hover { text-decoration: none; }
+	}
+}
+
+.ajax_saved_alerts { margin-top: 40px; }
+
+// Alerts Widget:
+.alerts_widget_holder,
+.alerts_page_holder {
+	position: relative;
+	@include clearfix;
+}
+
+.add_alert_area {
+	p { width: 80%; margin: 40px 0 0 150px; }
+}
+
+#alert_widget_input {
+	float: right;
+	position: absolute;
+	top: -30px;
+	right: 140px;
+	padding: 0 12px 0 10px;
+	width: 180px;
+	height: 32px;
+	font-family: LatoLight, 'HelveticaNeue-Light', 'Helvetica Neue Light', Arial, sans-serif;
+	font-size: 1em;
+	line-height: 20px;
+	color: #000;
+	border: 1px solid $lgray;
+	background: #f2f2f2;
+	&:hover { border: 1px solid #d9d9d9; }
+}
+
+.alerts_page_holder {
+	#alert_widget_input {
+		right: 7px;
+	}
+}

@@ -1,0 +1,50 @@
+/*  INVITE COWORKERS
+====================================================
+==================================================== */
+#invite_coworkers {
+	.widget_content h2 {
+		margin: 10px 0;
+		padding: 15px 0;
+		border-top: 1px solid #e0e0e0;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	.btn {
+		color: white;
+		background: $orange;
+		&:hover { background: lighten($orange, 10%); }
+	}
+}
+
+.invite_top_bumper { width: 100%; height: 47px; }
+
+#preview_invite_email,
+#invited_selected_btn { text-align: center; @include noselect(); }
+#preview_invite_email { float: left; width: 170px; }
+#invited_selected_btn { float: right; width: 131px; }
+
+#table_coworkers {
+	thead { font-family: LatoBold; font-size: 12px; color: #444; }
+
+	tbody { font-size: 14px; color: #666; tr:nth-child(even) { background: #fafafa; } }
+
+	td:first-child { padding: 10px; width: 20px; border-right: 1px solid #e0e0e0; @include noselect(); }
+
+	td { padding: 0 10px; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; }
+}
+
+.invite_emails  {
+	padding: 5px;
+
+	span { font-size: em(12); }
+}
+
+.member_box { width: 19px; height: 20px; background-position: -480px -40px; }
+
+.commision_tag { margin-left: 20px; }
+
+// For report page
+.btn_invite {
+	background: $orange;
+	&:hover { background: lighten($orange, 10%); }
+}

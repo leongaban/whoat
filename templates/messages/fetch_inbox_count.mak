@@ -1,0 +1,1 @@
+<h4 class="goto_inbox">Viewing <em class="viewing_inbox_num">${len(messages_inbox)}</em> of <em class="viewing_inbox_total">${messages_inbox_total}</em></h4>

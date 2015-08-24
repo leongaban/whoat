@@ -1,0 +1,85 @@
+/*  ABOUT
+====================================================
+==================================================== */
+#about_page {
+
+}
+
+.about_container {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 80%;
+	height: 100%;
+
+	h2 { margin-bottom: 20px; font-size: em(24); color: $blue; }
+
+	p { margin: 20px 0; font-size: em(18); line-height: em(20); }
+}
+
+.inside_about_content {
+	margin: 60px;
+}
+
+.about_block_1,
+.about_block_2 {
+	display: block;
+	margin: 0 auto;
+	min-height: 400px;
+}
+
+.about_copy_1,
+.about_copy_2 {
+	padding: 40px 0;
+}
+
+.about_hand_shake {
+	float: left;
+	margin: 35px 25px 5px 0px;
+	width: 275px;
+	height: 275px;
+	background-position: -160px -160px;
+}
+
+.about_phone_bubbles {
+	float: right;
+	margin: 5px 0px 5px 25px;
+	width: 218px;
+	height: 283px;
+	background-position: -460px -160px;
+}
+
+
+
+/*  FAQ
+====================================================
+==================================================== */
+
+.about_banner,
+.faq_banner {
+	margin-top: 50px;
+	padding: 75px 0;
+	height: 50px;
+	text-shadow: 1px 1px 1px #666;
+	background: darken($orange, 10%);
+
+	h1 { font-size: 3.250em; text-align: center; color: white; }
+}
+
+.faq_container {
+	margin: 60px;
+
+	dl dt {
+		margin: 0 0 20px 40px;
+		color: $blue;
+		font-size: 1.50em;
+	}
+
+	dl dd {
+		margin: 0 0 30px 40px;
+		color: #666;
+		line-height: 1.80em;
+	}
+
+	a { color: $orange; }
+	a:hover { text-decoration: none; }
+}

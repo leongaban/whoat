@@ -1,0 +1,25 @@
+/*  TERMS & PRIVACY POLICY
+====================================================
+==================================================== */
+
+#terms_container {
+	width: auto;
+	padding: 10px;
+	line-height: em(20);
+
+	h1, h2, h4 { font-family: LatoBold; }
+
+	h1 { margin-bottom: 10px; font-size: em(24); }
+
+	h2 { font-size: em(20); }
+
+	h4 { margin-top: 30px; font-size: em(18); }
+
+	p { margin: 20px 0; }
+
+	h2.terms-privacy-anchor { margin: 40px 0; }
+
+	ul { margin-left: 40px; list-style: disc; }
+
+	ul > li { float: none; margin-bottom: 10px; }
+}

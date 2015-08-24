@@ -1,0 +1,1 @@
+<h4 class="goto_outbox">Viewing <em class="viewing_outbox_num">${len(messages_outbox)}</em> of <em class="viewing_outbox_total">${messages_outbox_total}</em></h4>

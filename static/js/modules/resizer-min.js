@@ -1,0 +1,1 @@
+function theResizer(){alert("resizes the sidebar");var e=$(window).height()-($("#top_bar").height()+$("footer").height());$("#sidebar, #content").css("height",e);$(window).resize(function(){var e=$(window).height()-($("#top_bar").height()+$("footer").height());$("#sidebar, #content").css("height",e)})}theResizer();

@@ -1,0 +1,33 @@
+/* Animation */
+@-webkit-keyframes spinAround {
+	from { -webkit-transform: rotate(0deg) }
+	to   { -webkit-transform: rotate(360deg); }
+}
+@keyframes spinAround {
+	from { transform: rotate(0deg) }
+	to   { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotation {
+	0% 	 { -webkit-transform: rotate(0deg); }
+	50%  { -webkit-transform: rotate(-180deg); }
+	100% { -webkit-transform: rotate(-360deg); }
+}
+@keyframes rotation {
+	0% 	 { transform: rotate(0deg); }
+	50%  { transform: rotate(-180deg); }
+	100% { transform: rotate(-360deg); }
+}
+
+@keyframes upDown {
+    from { top: 8px; } 
+    to   { top:-18px; }
+}
+@-moz-keyframes upDown {
+    from { top: 8px; } 
+    to   { top:-18px; }
+}
+@-webkit-keyframes upDown {
+    from { top: 8px; } 
+    to   { top:-18px; }
+}

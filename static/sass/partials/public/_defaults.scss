@@ -1,0 +1,66 @@
+/*  START OF WHO@ STYLES
+
+	DEFAULTS
+====================================================
+==================================================== */
+html  {
+	// height: 100%;
+	// overflow: hidden;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "LatoLight",
+				 "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+				 Helvetica, Arial, sans-serif;
+	color: $gray;
+	background: #F5F5F5;
+
+	.container		{ min-width: 768px; }
+}
+
+h1 					{ margin: 0; }
+
+html,
+button,
+select,
+textarea 			{ color: $gray; }
+
+.container 			{ width: 100%; height: auto; }
+
+.clearfix:before,
+.clearfix:after 	{ content: " "; display: table; }
+.clearfix:after 	{ clear: both; }
+
+.orange    			{ color: $orange; }
+.orange_bg 			{ background: $orange; }
+
+.blue 	 			{ color: $blue; }
+.blue_bg 			{ background: $blue; }
+
+.bold 				{ font-family: LatoBold; }
+
+.fl 				{ float: left; }
+.fr 				{ float: right; }
+
+.display_block 		{ display: block; }
+
+footer {
+	width: 100%;
+	height: 30px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.625em;
+	line-height: 30px;
+	text-align: center;
+	color: #747878;
+	border-top: 1px solid #ccc;
+	background: white;
+	z-index: 3;
+
+	a {
+		color: #747878;
+		text-decoration: none;
+		&:hover { text-decoration: underline; }
+	}
+}

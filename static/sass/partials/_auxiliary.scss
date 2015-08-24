@@ -1,0 +1,194 @@
+/*  AUXILIARY STYLES
+====================================================
+==================================================== */
+
+/* Triangles
+=============================== */
+// .triangle_up {
+//     @include triangle("up", 8px, blue);
+// }
+
+/* Verify Page
+=============================== */
+.verify_logout {
+	width: 100%;
+	text-align: right;
+	margin-top: 10px;
+	font-size: em(12);
+	color: $gray;
+	cursor: pointer;
+	@include clearfix;
+}
+
+/* CUSTOM CHECKBOXES
+=============================== */
+input[type=checkbox].css-checkbox {
+	position: absolute; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	width: 1px; 
+	margin: -1px; 
+	padding: 0;
+	border: 0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	height: 20px; 
+	display: inline-block;
+	line-height: 20px;
+	background-repeat: no-repeat;
+	background-position: -1580px 0px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label { background-position: -1580px -20px; }
+
+.css-label { width: 100%; height: 20px; }
+
+.check-div-on,
+.check-div-off {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background-position: -1580px -20px;
+	cursor: pointer;
+}
+
+.check-div-off { background-position: -1580px 0px; }
+
+
+/* SYNC HELP POPUPS
+=============================== */
+#ex_help_iphone_support {
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+	padding-bottom: 20px;
+
+	a { color: $orange; }
+}
+
+#ex_help_iphone_close { position: absolute; right: 0; cursor: pointer; }
+
+#ex_help_iphone_prev { position: absolute; top: 370px; left: 365px; cursor: pointer; }
+
+#ex_help_iphone_next { position: absolute; top: 370px; left: 485px; cursor: pointer; }
+
+.help_background { width: 820px; height: 581px; }
+
+#exchange_help_iphone1 {
+	background-image: url('/static/img/dashboard/help/exchange-help-iphone-1.jpg');
+}
+
+#exchange_help_iphone2 {
+	display: none;
+	background-image: url('/static/img/dashboard/help/exchange-help-iphone-2.jpg');
+}
+
+#exchange_help_iphone3 {
+	display: none;
+	background-image: url('/static/img/dashboard/help/exchange-help-iphone-3.jpg');
+}
+
+#exchange_help_iphone4 {
+	display: none;
+	background-image: url('/static/img/dashboard/help/exchange-help-iphone-4.jpg');
+}
+
+#exchange_help_iphone5 {
+	display: none;
+	background-image: url('/static/img/dashboard/help/exchange-help-iphone-5.jpg');
+}
+
+#ex_help_outlook_prev {
+	display: none;
+	position: absolute;
+	top: 500px;
+	left: 40px;
+	cursor: pointer;
+}
+
+#ex_help_outlook_next {
+	position: absolute;
+	top: 500px;
+	left: 169px;
+	cursor: pointer;
+}
+
+#exchange-helpoutlook-1 {
+	background-image: url('/static/img/dashboard/help/exchange-helpoutlook-1.jpg');
+}
+
+#exchange-helpoutlook-2 {
+	display: none;
+	background-image: url('/static/img/dashboard/help/exchange-helpoutlook-2.jpg');
+}
+
+#exchange-help-android {
+	background-image: url('/static/img/dashboard/help/exchange-help_android.jpg');
+}
+
+
+/* REPORTS TOOL TIPS
+=============================== */
+.ui-tooltip, .arrow:after {
+    background: black !important;
+}
+.ui-tooltip {
+    padding: 10px 20px;
+    color: white !important;
+    font: "Arial";
+    font-size: 11px !important;
+    border-radius: 20px;
+}
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+.arrow.top { top: -16px; bottom: auto; }
+.arrow.left { left: 20%; }
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    tranform: rotate(45deg);
+}
+.arrow.top:after { bottom: -20px; top: auto; }
+
+.unique_class{
+    margin-bottom: 5px;
+    color: white !important;
+    overflow: hidden;
+}
+.unique_class td{
+    background: black;
+    min-width: 30px;
+}
+.unique_class td img{
+    background: white;
+    padding: 4px;
+    border-radius: 4px;
+    margin-right: 7px;
+}
+.unique_class .raise_td{
+    position: relative;
+    top: -8px;
+    text-align: left;
+}
+
+.custom_tooltip, .username_tooltip, .searches_tooltip { cursor: pointer; }

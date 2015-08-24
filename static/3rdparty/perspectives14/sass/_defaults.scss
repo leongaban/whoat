@@ -1,0 +1,65 @@
+/*  START OF WHO@ STYLES
+
+	DEFAULTS
+====================================================
+==================================================== */
+html  {
+	// height: 100%;
+	// overflow: hidden;
+}
+
+body {
+	width: 100%;
+	// max-width: 1600px;
+	min-width: 640px; // remove to finish mobile responsive sizes
+	height: 100%;
+	font-family: "LatoLight",
+				 "HelveticaNeue-Light",
+				 "Helvetica Neue Light",
+				 "Helvetica Neue",
+				 Helvetica,
+				 Arial,
+				 sans-serif;
+	color: $gray;
+}
+
+h1 { margin: 0; }
+
+html,
+button,
+input,
+select,
+textarea { color: $gray; }
+audio,
+canvas,
+img,
+video {
+    // vertical-align: middle;
+}
+
+textarea { resize: vertical; }
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after { clear: both; }
+
+.orange { color: $orange; }
+.orange_bg { background: $orange; }
+
+.blue { color: $blue; }
+.blue_bg { background: $blue; }
+
+em { font-family: LatoBold; }
+
+.fl { float: left; }
+.fr { float: right; }
+
+.container {
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: 1200px;
+}

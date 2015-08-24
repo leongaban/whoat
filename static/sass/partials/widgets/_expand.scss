@@ -1,0 +1,112 @@
+/*  EXPAND WIDGET
+====================================================
+==================================================== */
+.expand_widget_top,
+.alerts_widget_top,
+.expand_widget_bot,
+.alerts_widget_bot {
+	display: block;
+}
+
+.expand_widget_icon,
+.alerts_widget_icon { float: left; margin-right: 10px; height: 25px; }
+
+.expand_widget_icon { width: 22px; background-position: -138px -256px; }
+
+.expand_widget {
+
+	table { margin-top: -20px; }
+
+	.invite_blue { top: -1px; }
+
+	.friend_yellow { float: right; }
+
+	.send_friend {
+		float: right;
+		position: relative;
+		padding: 0px 27px;
+		background: $orange;
+		z-index: 3;
+		&:hover { background: lighten($orange, 10%); }
+	}
+}
+
+.invite_friend_tr { position: relative; }
+
+.w_expand_row:nth-child(even) { background: #fafafa; }
+
+.w_expand_invite_row {
+	position: relative;
+	padding: 5px 0 10px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom:1px solid #ccc;
+
+	span { position: absolute; font-size: em(11); }
+}
+
+.expand_table_containers { width: 100%; height: 300px; }
+
+.widget_invite_area,
+.widget_friend_area {
+	h2 {
+		padding: 0;
+		width: 100%;
+		height: 30px;
+		font-size: em(18);
+		color: $orange;
+	}
+}
+
+// Invite Block
+.widget_invite_area {
+	float: left;
+	width: 40%;
+	margin-right: 20px;
+	min-width: 300px;
+	height: 300px;
+	
+	.expand_invite_row { width: 30%; }
+}
+
+// Friend Block
+.widget_friend_area {
+	float: left;
+	width: 40%;
+	min-width: 300px;
+	height: 300px;
+	// background: blue;
+	
+	.expand_friend_label { padding: 0 0 0 10px; }
+}
+
+.add_friend_input_container { position: relative; width: 100%; }
+
+#add_friend_input {
+	float: left;
+	position: absolute;
+	top: -6px;
+	margin-left: -9px;
+	padding: 6px 0 6px 14px;
+	width: 100%;
+	height: 26px;
+	font-size: 1em;
+	line-height: 29px;
+	color: #000;
+}
+
+.expand_last_td {
+	border-bottom: 1px solid white !important;
+
+	a {
+		font-family: LatoBold;
+		font-size: em(14);
+		text-decoration: none;
+		&:hover { text-decoration: underline; }
+	}
+}
+
+// Alerts
+.alerts_widget {
+	td { border-right: 0 !important; }
+}

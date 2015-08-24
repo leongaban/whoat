@@ -1,0 +1,196 @@
+/*  DARK FTUE
+====================================================
+==================================================== */
+
+#dark_ftue {
+	display: none;
+	button {
+		padding: 10px 30px;
+		font-size: em(30);
+		color: #fff;
+		border: 0;
+		background: $orange;
+		@include rounded(6px);
+
+		&:hover {
+			background: darken($orange, 15%);
+		    -moz-transition: all .5s ease-in;
+		    -webkit-transition: all .5s ease-in;
+		    transition: all .5s ease-in;
+		}
+	}
+}
+
+.dark_overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 5; opacity: .90; }
+
+// Dark Globals
+// ====================================================
+.dark_step_2, .dark_step_3, .dark_step_4, .dark_step_5, .dark_step_6, .dark_step_7 { display: none; }
+
+.dark_handshake,
+.dark_videos,
+.dark_gear,
+.dark_search,
+.dark_sidebar,
+.dark_recents,
+.dark_expand {
+	background-size: 970px 1017px;
+	background-image: url(/static/img/dashboard/ftue/dark.png), none;
+}
+
+.dark_step_1, .dark_step_2, .dark_step_3, .dark_step_4, .dark_step_5, .dark_step_6, .dark_step_7 {
+	position: absolute;
+	z-index: 6;
+
+	h1 { margin-top: 60px; font-size: em(77); color: $orange; }
+	h2 { margin-bottom: 40px; font-size: em(42); color: #fff; }
+	h3 { font-size: em(37); color: #fff; }
+}
+
+// Dark Step 1
+// ====================================================
+.dark_step_1 {
+	top: 50%;
+	left: 50%;
+	margin-top: -350px;
+	margin-left: -350px;
+	width: 700px;
+	height: 600px;
+	text-align: center;
+}
+
+.dark_handshake { margin: 0 auto; width: 322px; height: 323px; }
+
+// Dark Step 2
+// ====================================================
+.dark_step_2 {
+	right: 0;
+	margin: 122px 20px 0 0;
+	width: 970px;
+
+	h3 { margin: 40px 0; }
+}
+
+.dark_videos { width: 970px; height: 244px; background-position: 0 -332px; }
+
+// Dark Step 3
+// ====================================================
+.dark_step_3 {
+	right: 0;
+	margin: 2px 10px 0 0;
+	width: 769px;
+
+	h3 { margin-top: 40px; }
+	button { float: right; margin: 40px 90px 0 0; }
+}
+
+.dark_gear { float: right; width: 90px; height: 73px; background-position: -798px 0; }
+
+// Dark Step 4
+// ====================================================
+.dark_step_4 {
+	right: 0;
+	margin-right: 90px;
+	width: 660px;
+	height: 290px;
+	button { margin-top: 30px; }
+}
+
+.dark_search {
+	margin-bottom: 25px;
+	width: 593px;
+	height: 73px;
+	background-position: 0 -944px;
+}
+
+.dark_search_copy {
+	margin: 0 100px 0 -100px;
+	width: 730px;
+}
+
+.step_4_para1 {
+	float: left;
+	width: 305px;
+	text-align: right;
+}
+
+.step_4_para2 {
+	float: right;
+	width: 360px;
+	text-align: left;
+}
+
+// Dark Step 5
+// ====================================================
+.dark_step_5 {
+	margin-top: 80px;
+	width: 845px;
+	height: 350px;
+}
+
+.dark_sidebar {
+	float: left;
+	width: 238px;
+	height: 332px;
+	margin-right: 30px;
+	background-position: -322px 0px;
+}
+
+.step_5_copy {
+	float: right;
+	width: 575px;
+	li:nth-child(2) { margin: 52px 0; }
+}
+
+// Dark Step 6
+// ====================================================
+.dark_step_6 {
+	margin-top: 420px;
+	width: 845px;
+	height: 350px;
+}
+
+.dark_step_5,
+.dark_step_6,
+.dark_step_7 {
+	h3 { font-size: em(30); }
+	button { margin-top: 30px; }
+}
+
+.dark_recents {
+	float: left;
+	width: 238px;
+	height: 310px;
+	background-position: -560px 0px;
+}
+
+.step_6_copy {
+	float: right;
+	width: 570px;
+	li { margin-bottom: 10px; }
+}
+
+// Dark Step 7
+// ====================================================
+.dark_step_7 {
+	right: 0;
+	margin: 180px 36px 0 0;
+	width: 970px;
+	height: 525px;
+}
+
+.step_7_copy {
+	ul { float: left; }
+	button { float: right; }
+}
+
+.dark_expand {
+	float: left;
+	margin-top: 30px;
+	width: 970px;
+	height: 368px;
+	background-position: 0px -576px;
+}
+
+.first_in_company,
+.next_in_company { display: none; }

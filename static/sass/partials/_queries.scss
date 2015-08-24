@@ -1,0 +1,302 @@
+/*  RESPONSIVE MEDIA QUERIES
+====================================================
+==================================================== */
+
+/* 1600
+==================================================== */
+@media all and (max-width: 1600px) {
+	// Outbox
+	.outbox_td_message 				  	{ width: 53%; }
+}
+
+/* 1400
+==================================================== */
+@media all and (max-width: 1400px) {
+	// Outbox
+	.outbox_td_message 				  	{ width: 51%; }
+	#my_request_details
+	.request_details_right 			  	{ width: 60%; }
+	// Inbox Details
+	.orange_line_2 					  	{ width: 100px; }
+}
+
+/* 1300
+==================================================== */
+@media all and (max-width: 1300px) {
+	.mobile_sync_row 				  	{ height: 200px; }
+}
+
+/* 1286
+==================================================== */
+@media all and (max-width: 1286px) {
+	.outbox_td_message 				  	{ width: 48%; }
+}
+
+/* 1200
+==================================================== */
+@media all and (max-width: 1200px) {
+	// Outbox List
+	.outbox_td_company  			  	{ width: 25%; }
+	// Inbox List
+	.inbox_td_requestor 			  	{ width: 28%; }
+	.inbox_td_target    			  	{ width: 25%; }
+	.inbox_td_message   			  	{ width: 23%; }
+	.inbox_td_status    			  	{ width: 25%; }
+	.quick_send 					  	{ float: left; margin: 3px 5px 10px 0; }
+	// Inbox Details
+	.orange_line_2 					  	{ width: 80px; }
+	// Sync
+	.stream_row  	 				  	{ height: 200px; }
+	.stream_stats 	 				  	{ float: left; margin-left: 0; width: 100%; }
+	.sync_plus 		 				  	{ float: right; margin-top: -60px; }
+	.snarfed_table .td_help			  	{ float: left; margin-right: 5px; }
+}
+
+/* 1168
+==================================================== */
+@media all and (max-width: 1168px) {
+	// Outbox
+	.outbox_td_message   			  	{ width: 45%; }
+	.who_i_want_to_meet  			  	{ padding-left: 0; width: 100%; }
+	// Inbox List
+	#inbox_thead_actions 			 	{ display: none; }
+	.widget header h1 	 			  	{ padding-top: 5px; font-size: em(22); }
+	.response_date 		 			  	{ width: 40px; font-size: em(12); }
+	// Inbox Details
+	.the_requestor, .the_target 	  	{ li:first-child { font-family: LatoRegular; font-size: 1em; }}
+	.request_details_right 			  	{ min-width: 0; width: auto; }
+	.center_details_right  			  	{ width: 300px; }
+	// Inbox Details
+	.orange_line_2 					  	{ display: none; }
+	// Expand Widget
+	.glass_groups 						{ margin: -10px 20px 20px 0; }
+	.expand_friends						{ margin-bottom: 20px; }
+	.widget_invite_area					{ margin-bottom: 60px; }
+	.widget_invite_area,
+	.widget_friend_area					{ width: 100%; height: 256px; }
+}
+
+/* 1045
+==================================================== */
+@media all and (max-width: 1045px) {
+	// Widgets
+	.widget_content 	 		  	  	{ tbody td { font-size: em(12); } }
+
+	// Topbar
+	.search_field 		  		  	  	{ width: 360px; }
+	#dash_search_input 	 		  	  	{ width: 245px; }
+
+	// Expand Widget
+	.expand_widget .send_friend			{ padding: 0 23px; }
+
+	// Outbox
+	.outbox_td_company 	 		  	  	{ width: 20%; }
+	.td_outbox_icon 	 		  	  	{ div { line-height: em(100); } }
+	.outbox_td_status 	  		  	  	{ width: 20%; }
+	.my_friend_details 	  		  	  	{ float: none; width: 100%; }
+	.friend_my_message 	  		  	  	{ float: none; padding: 20px; width: 90%; border-top: 1px solid #e0e0e0; }
+	.outbox_td_status ul 		  	  	{ top: 15px; }
+	.trashcan_mask 		 	 	  	  	{ left: 120px; }
+
+	// Inbox
+	.inbox_td_requestor  		  	  	{ width: 30%; }
+	.inbox_td_message 			  	  	{ width: 40%; }
+	.quick_accept,
+	.quick_deny 	    		  	  	{ margin: 0 2px 10px 0; }
+	.quick_send 				  	  	{ height: 24px; }
+	.friend_details 	 		  	  	{ float: none; border-right: none; width: 100%; }
+	.friend_vcard 		  		  	  	{ margin-left: 140px; width: auto; table { width: auto; } }
+	.friend_response_choices,
+	.friend_accepted_message,
+	.friend_accepted_message_show 	  	{ float: none; margin: 20px 0; height: 125px; clear: both; }
+
+	// Profile
+	.profile_details_area input,
+	.profile_details_area
+	.password_container 		  	  	{ width: 100%; }
+	.remove_info 				  	  	{ left: 276px; }
+}
+
+/* 999
+==================================================== */
+@media all and (max-width: 999px) {
+
+	// Dark
+	.dark_setp_1						{ margin-left: 350px; }
+
+	// Dashboard
+	.no_outbox_info,
+	.no_inbox_info 					  	{ width: 60%; }
+	// Inbox Details
+	.request_details_left,
+	.request_details_right  		  	{ width: 100%; }
+	.request_details_left   		  	{ border: none; }
+	.request_details_right  		  	{ border: none; border-top: 1px solid #e0e0e0; }
+	.the_requestor,
+	.the_target 					  	{ li:first-child { font-family: LatoLight; font-size: em(24); }}
+	.requestor_message,
+	.manager_message 				  	{ width: 96%; }
+	.center_details_right   		  	{ width: auto; }
+	.response_form .accepted_form,
+	.response_form .denied_form,
+	.response_accepted .accepted_form	{ margin: 0 auto; padding: 0; width: 100%; }
+	.response_form .accepted_form,
+	.response_form .denied_form,
+	.response_accepted .accepted_form	{ textarea { width: 97%; } button { margin-right: 0; }}
+	// Inbox Details
+	.orange_line_2 					  	{ display: block; width: 40%; }
+	// Friend Inbox
+	.friend_id_details 				  	{ width: 94%; }
+	// Profile
+	.remove_info 						{ left: 291px; }
+	// Snarf
+	.snarfed_table th    			  	{ font-size: em(14); }
+}
+
+/* 960
+==================================================== */
+@media all and (max-width: 960px) {
+	// Home
+	#content 					   	  	{ margin-left: 110px; }
+
+	// Topbar
+	#browse_companies 			   	  	{ top: -7px; padding: 7px 9px; font-size: em(12); }
+
+	// Sidebar
+	#sidebar 					   	  	{ width: 96px; }
+	#user_badge 				      	{ padding-bottom: 47px; height: 0; ul { display: none; }}
+
+	.outbox_sidebar_btn.on:before  	  	{ display: none; }
+	.outbox_sidebar_btn.on,
+	.outbox_sidebar_btn 		   	  	{ width: 68px; }
+	.outbox_sidebar_btn 		   	  	{ .outbox_icon { margin-left: 10px; }} 
+
+	.inbox_sidebar_btn.on,
+	.inbox_sidebar_btn 			   	  	{ width: 68px; }
+	.inbox_sidebar_btn.on:before   	  	{ display: none; }
+	.inbox_sidebar_btn 			   	  	{ .inbox_icon { margin-left: 10px; }}
+
+	.alerts_sidebar_btn,
+	.alerts_sidebar_btn.on 		   	  	{ width: 68px; }
+	.alerts_sidebar_btn.on:before   	{ display: none; }
+	.alerts_sidebar_btn 			   	{ .alerts_icon { margin-left: 10px; }}
+
+	.badge 								{ position: relative; top: -25px; left: 6px; }
+	.badge_help 						{ left: 105px; }
+
+	.reports_sidebar_btn.on,
+	.reports_sidebar_btn 	       	  	{ width: 68px; }
+	.reports_sidebar_btn.on:before 	  	{ display: none; }
+	.reports_sidebar_btn 		   	  	{ .reports_icon { margin-left: 10px; }}
+
+	.ipad_hide 					   	  	{ display: none; }
+	.whoat-intro 				   	  	{ display: none; }
+	.intro_subitem 				   	  	{ width: 50px; span { display: none; }}
+	.whoat-report 				   	  	{ display: none; }
+	.recent_searches					{ display: none; }
+	.bookmark_gray						{ display: none; }
+	.bookmark_help						{ display: none; }
+	.bookmark_icon						{ display: none; }
+}
+
+/* 930
+==================================================== */
+@media all and (max-width: 930px) {
+	.beta 	   			  	  			{ display: none; }
+}
+
+/* 900
+==================================================== */
+@media all and (max-width: 900px) {
+	// Top bar
+	.search_field 	   			  	  	{ width: 330px; }
+	#dash_search_input			  	  	{ width: 220px; }
+}
+
+/* 860
+==================================================== */
+@media all and (max-width: 860px) {
+	// Top bar
+	.search_field 	   			   	  	{ width: 270px; }
+	#dash_search_input 			   	  	{ width: 160px; font-size: em(12); }
+	// Outbox List
+	.trashcan_mask 	  			  	  	{ left: 100px; }
+	// Profile
+	.remove_info 				  	  	{ left: 254px; }
+}
+
+/* 799
+==================================================== */
+@media all and (max-width: 799px) {
+	// Top bar
+	.search_field	   			  	  	{ width: 250px; }
+	#dash_search_input 			  	  	{ width: 140px; }
+	#browse_companies  			  	  	{ padding: 7px 0; }
+	// Verified
+	.verify_msg 	   			 	  	{ font-size: em(14); }
+	.verify_button 	   			  	  	{ font-size: em(12); }
+	// Dashboard
+	.no_outbox_info,
+	.no_inbox_info 	   			   	  	{ width: 65%; font-size: em(12); }
+	// Outbox List
+	.outbox_td_message 			   	  	{ width: 40%; }
+	.outbox_td_status  			   	  	{ width: 25%; }
+	.trashcan_mask 	   			   	  	{ left: 110px; }
+	.fake_input 	   			   	  	{ float: left; margin-top: 20px; padding: 7px 0 10px 10px; width: 274px; height: 15px; }
+	.friend_outbox_status 		      	{
+					     		  	div { margin-left: 0px; }
+					       			  p { font-size: em(12); }}
+
+	// Profile
+	.profile_fields 	  		   	  	{ padding-bottom: 50px; }
+	.profile_details_area input,
+	.profile_details_area
+	.password_container 		   	  	{ max-width: 100%; width: 310px; }
+	.profile_left_column,
+	.profile_right_column 		   	  	{ width: 100%; }
+	.profile_contact_select 	      	{ padding-right: 0; select { max-width: 100%; width: 330px; }
+		.dropdown_arrow 		      	{ left: -10px; }}
+	.make_primary 				      	{ position: relative; left: 14px; }
+	.remove_info  				      	{ left: 319px; }
+}
+
+/* 780
+==================================================== */
+@media all and (max-width: 780px) {
+
+	// Top Bar
+	#search_tooltip 					{ right: 51px; padding: 8px 20px; width: 159px; font-size: em(13); }
+
+	// Widgets
+	.widget_content   				  	{ thead td { font-size: em(13); } }
+
+	// Outbox
+	.outbox_td_status  				  	{ width: 1%;
+				   				    li  { float: none; width: 40px; }
+				   				    div { margin-bottom: 2px; }}
+
+	// Outbox List
+	.outbox_td_message 				  	{ width: 45%; }
+	.outbox_td_status  				  	{ width: 5%; }
+	.trashcan_mask 	   				  	{ top: -30px; left: 50px; }
+
+	.outbox_td_company 				  	{ width: 18%; }
+	.my_friend_request_to 		      p { font-size: em(11); }
+
+	// Inbox List
+	.center_action_group 				{ width: 30px; }
+}
+
+/* HEIGHTS */
+/* 800
+==================================================== */
+@media all and (max-height: 800px) {
+	// Dark
+	.dark_setp_1						{ margin-top: 300px; }
+}
+
+/* 640
+==================================================== */
+@media all and (max-height: 640px) {
+	#ftue_tour_screens 			 footer { display: none; }
+}

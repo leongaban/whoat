@@ -1,0 +1,320 @@
+/*  SIDEBAR
+====================================================
+==================================================== */
+#sidebar { 
+	position: relative;
+	float: left;
+	left: 255px;
+	margin-left: -255px;
+	width: 239px;
+	background: white;
+	z-index: 2;
+}
+
+.small_loader { margin-left: 10px; }
+.sidebar_border_fix { height: 100%; }
+
+#user_badge {
+	margin: 0 20px 30px 25px;
+	padding-top: 40px;
+	width: 100%;
+	height: 47px;
+
+	li {
+		line-height: em(22);
+		
+		&:first-child {
+			width: 200px;
+			font-family: LatoBold, 'HelveticaNeue-Bold', 'Helvetica Neue Bold', Arial, sans-serif;
+			font-size: 0.813em;
+			cursor: pointer;
+		}
+
+		&:first-child:hover  { text-decoration: underline; }
+		&:first-child:active { color: darken($blue, 10%); }
+		&:nth-child(2),
+		&:nth-child(3) 		 { font-size: em(11); }
+		&:nth-child(3) 		 { font-family: LatoBold; }
+	}
+}
+
+.profile_pic {
+	float: left;
+	margin: 0 10px 20px 0;
+	width: 40px;
+	height: 40px;
+	border: 2px solid $orange; cursor: pointer;
+	background-position: -320px -120px;
+	cursor: pointer;
+	img { width: 40px; height: 40px; }
+}
+
+.profile_pic:hover  { border: 2px solid lighten($orange, 20%); }
+.profile_pic:active { border: 2px solid darken($orange, 10%); }
+
+#dashboard_sidebar_menu { margin-top: 10px; }
+
+// OUTBOX & INBOX SIDEBAR BUTTONS
+.outbox_sidebar_btn, .inbox_sidebar_btn, .alerts_sidebar_btn {
+	position: relative;
+	width: 211px;
+	height: 43px;
+	margin-top: -1px;
+	padding: 14px 0 0 27px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background: white;
+	cursor: pointer;
+
+	.request_label {
+		float: left;
+		position: relative;
+		top: 7px;
+		font-size: 1.250em;
+		color: $gray;
+	}
+
+	&.on {
+		background: $orange;
+
+		.request_label { color: white; }
+
+		&:before {
+			content:"";
+			position: absolute;
+			left: 83px;
+			width: 0;
+			height: 0;
+			border-top: 28.5px solid transparent;
+			border-left: 10px solid $orange;
+			border-bottom: 28.5px solid transparent;
+			margin: -12px 15px 0 155px;
+		}
+
+		&:hover { background: darken($orange, 10%); }
+		&:hover:before { border-left: 10px solid darken($orange, 10%); }
+	}
+}
+
+.outbox_sidebar_btn { &.on { .outbox_icon { background-position: -6px -209px; } } }
+.inbox_sidebar_btn  { &.on { .inbox_icon  { background-position: -8px -249px; } } }
+.alerts_sidebar_btn { &.on { .alerts_icon { background-position: -182px -240px; } } }
+
+.badge {
+	float: right;
+	margin: 5px 10px 0 0;
+	padding: 5px 7px 4px 7px;
+	font-family: LatoBold;
+	font-size: em(11);
+	color: #FFF;
+	background: $orange;
+	@include rounded(6px);
+
+	&:hover { background: darken($orange, 15%); }
+}
+
+.on {
+	.badge { background: lighten($orange, 10%); }
+}
+
+.badge_help {
+	position: absolute;
+	top: 17px;
+	left: 245px;
+	width: 130px;
+	color: #FFF;
+	background: $gray;
+	font-size: 12px;
+	padding: 6px 8px;
+
+	&:before {
+		position: relative;
+		top: 0;
+		left: -12px;
+		@include triangle(left, $size: 12px, $color: $gray);
+	}
+}
+
+.outbox_sidebar_btn {
+	.outbox_icon {
+		float: left;
+		margin: 5px 10px 0 0px;
+		width: 24px;
+		height: 21px;
+		background-position: -6px -209px;
+		z-index: 3;
+	}
+
+	.badge_help { display: none; }
+}
+
+.inbox_sidebar_btn {
+	.inbox_icon {
+		float: left;
+		margin: 3px 10px 0 0px;
+		width: 24px;
+		height: 21px;
+		background-position: -8px -249px;
+		z-index: 3;
+	}
+
+	.badge_help { display: none; }
+}
+
+.alerts_sidebar_btn {
+	.alerts_icon {
+		float: left;
+		margin: 3px 15px 0 0px;
+		width: 18px;
+		height: 22px;
+		background-position: -160px -240px;
+	}
+}
+
+.outbox_sidebar_btn:hover,
+.inbox_sidebar_btn:hover,
+.alerts_sidebar_btn:hover,
+.reports_sidebar_btn:hover, { background: #f5f5f5; }
+
+.outbox_sidebar_btn,
+.outbox_sidebar_btn.on,
+.outbox_sidebar_btn.on:before,
+
+.inbox_sidebar_btn,
+.inbox_sidebar_btn.on,
+.inbox_sidebar_btn.on:before { @include transition(background, .3s, ease-in-out); }
+
+.alerts_sidebar_btn,
+.alerts_sidebar_btn.on,
+.alerts_sidebar_btn.on:before { @include transition(background, .3s, ease-in-out); }
+
+// REPORTS BUTTON
+.reports_sidebar_btn {
+	width: 211px;
+	height: 43px;
+	margin-top: -1px;
+	padding: 14px 0 0 27px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+	background: white;
+	cursor: pointer;
+
+	.whoat-report {
+		position: relative;
+		float: left;
+		top: 7px;
+		margin-left: 6px;
+		font-family: 'LatoLight', 'HelveticaNeueLight', 'Helvetica Neue Light', Arial, sans-serif;
+		font-size: 1.250em;
+		color: $gray;
+	}
+
+	&.on {
+		background: $orange;
+
+		.reports_icon { background-position: -206px -45px; }
+
+		.whoat-report { color: white; }
+
+		&:before {
+		   content:"";
+		   position: absolute;
+		   left: 83px;
+		   width: 0;
+		   height: 0;
+		   border-top: 28.5px solid transparent;
+		   border-left: 10px solid $orange;
+		   border-bottom: 28.5px solid transparent;
+		   margin: -12px 15px 0 155px;
+		}
+
+		&:hover { background: darken($orange, 10%); }
+		&:hover:before { border-left: 10px solid darken($orange, 10%); }
+	}
+}
+
+.reports_icon {
+	float: left;
+	position: relative;
+	left: -3px;
+	width: 29px;
+	height: 29px;
+	background-position: -164px -45px;
+	z-index: 3;
+}
+
+.reports_sidebar_btn, .reports_sidebar_btn.on, .reports_sidebar_btn.on:before {
+	@include transition(background, .3s, ease-in-out);
+}
+
+// RECENT SEARCHES
+.recent_searches {
+	margin: 25px auto;
+	width: 200px;
+	overflow-x: hidden;
+
+	.title {
+		padding-bottom: 10px;
+		font-family: LatoRegular;
+		font-size: em(20);
+		text-align: center;
+
+		a {
+			color: $orange;
+			text-decoration: none;
+			&:hover { color: darken($orange, 10%); text-decoration: underline; }
+		}
+	}
+
+	li { padding: 5px 0; border-bottom: 1px solid #eee; }
+
+	a {
+		color: $gray;
+		text-decoration: none;
+		&:hover { color: $orange; text-decoration: underline; }
+	}
+}
+
+// BOOKMARKLET
+.bookmark_gray {
+	position: relative;
+	margin: 35px 0 0 30px;
+    font-size: 1px; color: #fff;
+    width: 178px;
+    height: 58px;
+    background-position: -960px -440px;
+}
+
+.bookmark_help {
+	margin: 10px 0 0 40px;
+	width: 170px;
+
+	p {
+		float: left;
+		margin-left: 6px;
+		width: 140px;
+		font-size: em(14);
+		color: $blue;
+		text-align: center;
+	}
+}
+
+.blue_question {
+	float: left;
+	margin-top: 5px;
+	width: 14px;
+    height: 14px;
+    background-position: -146px -266px;
+}
+
+.bookmark_icon {
+	display: none;
+	width: 30px;
+    height: 30px;
+    background-position: -1140px -440px;	
+}
+
+// .sidebar_bookmark_small {
+// 	margin: 25px 0 0 33px;
+// 	font-size: 1px; color: #454A4A;
+// }

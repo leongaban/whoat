@@ -1,0 +1,37 @@
+/*  NAMEGAME APP
+====================================================
+==================================================== */
+#namegame_area {
+	display: none;
+	overflow: hidden;
+	padding: 50px 0;
+	color: $blue;
+	background: white;
+
+	h1, h2 { font-size: em(36); }
+
+	h1 { margin: 35px 0; }
+
+	h2 { font-family: LatoBold; }
+
+	h3 {
+		margin-top: 35px;
+		p { float: left; margin: 5px 0 0 15px; width: 100px; color: white; }
+	}
+}
+ 
+.namegame_container { margin: 0 auto; width: 65%; height: 100%; }
+
+.namegame_couple,
+.namegame_details { float: left; }
+.namegame_logo { width: 226px; height: 56px; background-position: -151px -53px; }
+.namegame_couple {
+	width: 40%;
+	img { width: 332px; height: 533px; }
+}
+
+.namegame_details {
+	margin-left: 30px;
+	width: 55%;
+	ul { margin-top: 30%; vertical-align: middle; }
+}

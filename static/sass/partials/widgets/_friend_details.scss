@@ -1,0 +1,132 @@
+
+/* Friend Outbox Details
+============================================================== */
+.friend_my_status {
+	float: left; padding: 20px; width: 50%;
+	p { margin: 20px 0 0 20px; }
+}
+
+.centered_my_message {
+	margin: 5% auto;
+	max-width: 600px;
+	width: 300px;
+	text-align: center;
+
+	.big_accepted_check { margin: 0 auto; }
+
+	.timestamp { float: right; }
+}
+
+// Outbox Friends
+.friend_big_pending {
+	margin: 0 auto;
+	width: 48px;
+	height: 48px;
+	background-position: -120px -560px;
+}
+
+/* Friend Inbox Details
+============================================================== */
+.member_badge {
+	display: inline-block;
+	position: relative;
+	top: 99px;
+	left: 72px;
+	width: 24px;
+	height: 24px;
+	background-position: -135px 0;
+}
+
+#friend_request_message { margin-left: 20px; border-top: 1px solid #e0e0e0; clear: both; }
+
+.friend_details,
+.friend_response_choices,
+.friend_accepted_message,
+.friend_denied_message,
+.my_friend_details { float: left; }
+
+.friend_details,
+.my_friend_details { padding: 20px 20px 20px 0; width: 40%; border-right: 1px solid #e0e0e0; }
+
+.friend_response_choices {
+	padding: 20px;
+	margin: 5% auto;
+	width: 300px;
+	
+	p:first-child { margin-bottom: 10px; }
+
+	b { font-family: LatoBold; font-weight: normal; }
+
+	em { font-size: em(11); }
+}
+
+.center_this_61 { float: left; width: 61px; margin-left: 40px; }
+
+.big_accepted_check,
+.big_denied_x { width: 61px; height: 61px; }
+
+.big_accepted_check { background-position: -90px -169px; }
+.big_denied_x 	    { background-position: -169px -169px; }
+
+.friend_accepted_message,
+.friend_accepted_message_show,
+.friend_denied_message {
+	display: none;
+	margin: 8% auto 0 auto;
+	padding: 20px;
+
+	p { margin: 20px 0 0 10px; text-align: center; }
+}
+
+.friend_accepted_message_show { display: block; }
+
+.friend_avatar,
+.my_friend_avatar {
+	img { display:block; width: 90px; height: 90px; border: 2px solid #bbbdbf; }
+}
+
+.friend_avatar img { width: 90px; height: 90px; background-position: 0px -480px; }
+
+.friend_requestor {
+	float: left; margin: 10px 0 0 25px; font-family: LatoLight;
+	ul { margin-top: 17px; }
+}
+
+.friend_id_details {
+	margin: 20px 0 0 0;
+	p, li { margin-bottom: 4px; }
+	li:first-child { font-size: em(26); color: $orange; }
+	li:nth-child(2) { font-size: em(12); margin-bottom:10px; }
+}
+
+.friend_avatar,
+.my_friend_avatar,
+.friend_id_details,
+.friend_requestor { float: left; margin-bottom: 20px; }
+.friend_requestor {
+	li:first-child { font-size: em(26); color: $blue; }
+}
+
+.friend_vcard {
+	display: none;
+	float: left;
+	margin: 20px 0 0 20px;
+	width: 80%;
+	color: #666;
+
+	a { color: $orange; text-decoration: none; }
+
+	table {
+		td { padding: 5px 10px; font-size: 13px; }
+
+		td:first-child {
+			width: 20%;
+			font-family: LatoBold;
+			text-align: right;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+		}
+
+		td:nth-child(2) { width: 80%; border-bottom: 1px solid #ccc; }
+	}
+}
